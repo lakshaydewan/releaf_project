@@ -9,6 +9,9 @@ import {
 } from "react-router-dom";
 import { Home } from './pages/main pages/home'
 import { Assigenmentpage } from './pages/main pages/assigment';
+import { Assignmentfilepage } from './pages/main pages/assigmentbutpage';
+import { Practicalfilepage } from './pages/main pages/practicalfile';
+import { Egsheets } from './pages/main pages/egsheets';
 
 function App() {
   return (
@@ -16,7 +19,10 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} /> 
-        <Route path="/assigment" element={<Assigenmentpage/>} /> 
+        <Route path="/assigment" element={<Assigenmentpage/>} />
+        <Route path="/assigment/practicalfile" element={<Assignmentfilepage/>} />
+        <Route path="/assigment/assigment" element={<Practicalfilepage/>} />
+        <Route path="/assigment/egsheets" element={<Egsheets/>} /> 
 
       </Routes>
       </BrowserRouter>

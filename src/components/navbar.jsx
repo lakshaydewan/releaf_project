@@ -11,7 +11,9 @@ function Navbar(){
     return <div className="flex justify-between h-20 items-center p-10 ">
         <div className="flex w-48 h-full text-white items-center justify-center">LOGO</div>
         <div className="flex w-1/2 h-full items-center font-normal justify-center space-x-20">
-            <div className="hover:font-medium text-white cursor-pointer duration-200">HOME</div>
+            <div onClick={(e) => {
+                navigate("/")
+            }} className="hover:font-medium text-white cursor-pointer duration-200">HOME</div>
             <div onClick={(e) => {
                 navigate("/assigment")
             }} className="hover:font-medium text-white cursor-pointer duration-200">ASSIGENMENTS</div>
