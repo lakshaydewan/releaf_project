@@ -1,23 +1,18 @@
 import { Assigenmentscards } from "../../components/assigmentcards";
 import { Banner } from "../../components/banner";
+import { FAQ } from "../../components/FAQs";
 import { Navbar } from "../../components/navbar";
+import { News } from "../../components/news";
 
 
 function Home(){
 
-    return <div>
+    return <div className="bg-black space-y-8">
         <Navbar />
         <Banner />
         <Assigenmentscards />
-        <div>
-            <div>checkout syllabus and resources</div>
-        </div>
-        <div>
-            <div>checkout and browse store</div>
-        </div>
-        <div>
-            contact us
-        </div>
+        <News />
+        <FAQ />
     </div>
 }
 
