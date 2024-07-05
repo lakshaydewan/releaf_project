@@ -5,7 +5,7 @@ function Productlist(){
     const navigate = useNavigate()
 
 
-    return <div className="w-full h-fit bg-current flex justify-center py-6 ">
+    return <div className="w-full h-fit  flex justify-center py-6 ">
         <div id="content div" className="w-10/12 space-y-20">
         <div id="heading" className="text-white font-bold text-5xl text-center"> what we make</div>
             <div id="subcontendiv" className="flex w-full space-x-4 h-auto p-8 border rounded-3xl border-none" style={{

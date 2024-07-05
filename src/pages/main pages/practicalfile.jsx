@@ -1,12 +1,17 @@
+import { Navbar } from "../../components/navbar"
+import { Product2 } from "../../components/product2"
 
 
 
 function Practicalfilepage(){
 
 
-    return <div>
-        this is practical file page
-    </div>
+    return <div className="space-y-8 w-full h-full" style={{backgroundColor: "black",
+    }}>
+    <Navbar />
+    <Product2 />
+    
+</div>
 }
 
 export {Practicalfilepage}

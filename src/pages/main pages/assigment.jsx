@@ -17,7 +17,7 @@ function Assigenmentpage(){
         
     })
 
-    return <div className="bg-black h-full space-y-8">
+    return <div className=" space-y-8">
         <Navbar />
         <Assigmentpagebanner />
         <Productlist />

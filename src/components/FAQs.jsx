@@ -29,7 +29,7 @@ function FAQ(){
             <div id="left-section" className="space-y-10 w-2/5" >
                 <div id="upper-section" className="space-y-1">
                     <div className=" px-3 text-sm h-fit tracking-widest text-white font-semibold w-fit flex py-1.5 border rounded-full">FAQ</div>
-                    <div className="text-white font-bold text-4xl">FREQUENTLY <br /> ASKED <br />QUESTION</div>
+                    <div className="text-white font-bold text-6xl">FREQUENTLY <br /> ASKED <br />QUESTION</div>
                 </div>
                
             </div>
