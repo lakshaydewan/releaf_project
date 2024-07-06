@@ -10,10 +10,10 @@ function Navbar(){
 
     return <div className="flex justify-between h-20 items-center p-10 ">
         <div className="flex w-48 h-full text-white items-center justify-center">LOGO</div>
-        <div className="flex w-1/2 h-full items-center font-normal justify-center space-x-20">
+        <div className="flex w-1/2 h-full items-center font-normal justify-center space-x-12">
             <div onClick={(e) => {
                 navigate("/")
-            }} className="hover:font-medium text-white cursor-pointer duration-200">HOME</div>
+            }} className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-2 py-1 rounded-sm">HOME</div>
             <div onClick={(e) => {
                 navigate("/assigment")
             }} className="hover:font-medium text-white cursor-pointer duration-200">ASSIGENMENTS</div>

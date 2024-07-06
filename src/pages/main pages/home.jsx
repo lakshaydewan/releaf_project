@@ -8,7 +8,7 @@ import Section from "../../components/section";
 
 function Home(){
 
-    return <div className="bg-[#11120D] space-y-8">
+    return <div className="bg-[#0a0a0a] space-y-8">
         <Navbar />
         <Banner />
         <Section></Section>
