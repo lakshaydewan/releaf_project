@@ -13,6 +13,8 @@ import { Assignmentfilepage } from './pages/main pages/assigmentbutpage';
 import { Practicalfilepage } from './pages/main pages/practicalfile';
 import { Egsheets } from './pages/main pages/egsheets';
 import { Studylyout } from './pages/main pages/studylayout';
+import { Profilepage } from './pages/main pages/profilepage';
+import { Studyresources } from './pages/main pages/studyresourcespage';
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
         <Route path="/assigment/practicalfile" element={<Assignmentfilepage/>} />
         <Route path="/assigment/assigment" element={<Practicalfilepage/>} />
         <Route path="/assigment/egsheets" element={<Egsheets/>} />
-        <Route path="/studylayout" element={<Studylyout/>} /> 
+        <Route path="/studylayout" element={<Studylyout/>} />
+        <Route path="/profilepage" element={<Profilepage/>} />
+        <Route path="/studyresources" element={<Studyresources />} /> 
 
       </Routes>
       </BrowserRouter>

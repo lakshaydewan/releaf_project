@@ -1,9 +1,12 @@
+import { Navbar } from "../../components/navbar"
 
 
 
 function Studylyout() {
 
-    return <div className="">
+    return <div>
+        <Navbar />
+        <div className="">
         <div className="flex justify-between">
         <div className="w-[900px] p-3 h-screen flex flex-col space-y-4">
             <iframe className="w-full h-[495px] border border-none rounded-3xl" src="https://www.youtube.com/embed/z5yvZW8Ep-E?si=7SvG7BW7OH2n54nE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -25,6 +28,7 @@ function Studylyout() {
     </div>
     <div>
 
+    </div>
     </div>
     </div>
 }
