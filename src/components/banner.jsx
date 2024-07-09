@@ -16,7 +16,12 @@ function Banner(){
     whileInView={{ opacity: 1 }}
     className=" h-screen w-full p-20 flex justify-center">
                 <div className="flex w-1/2 text-4xl font-extrabold text-center text-white"><div><span className="text-blue-300">"Empowering</span> Your Academic Journey with Resources, News, and More!"</div>
-                <Movingborderbutton />
+                <Movingborderbutton
+        borderRadius="1.75rem"
+        className="bg-black dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800"
+      >
+        Borders are cool
+      </Movingborderbutton>
                 </div>
             </motion.div>
 }
