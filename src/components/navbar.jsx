@@ -1,6 +1,7 @@
 import { User, useAuth0 } from "@auth0/auth0-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Loginbutton } from "./button";
 
 function Navbar(){
     const navigate = useNavigate()
@@ -53,15 +54,7 @@ function Navbar(){
                 </>
             ) : (
                 <>
-                    <button onClick={() => {
-    if(user){
-        console.log(user);
-    }else{
-        console.log("the user", user )
-        loginWithRedirect()
-    }
-}} className="overflow-hidden border-0 bg-blue-500 h-14 w-44 border rounded-full">
-    <div className="w-"></div>login</button>w
+                    <Loginbutton />
                 </>
             )
            }

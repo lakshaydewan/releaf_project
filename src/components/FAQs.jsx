@@ -23,18 +23,23 @@ function FAQ(){
         duration : 0.5,
         delay : 0.3
     }} className="w-full h-screen flex items-center justify-center">
-        <div className="flex w-10/12 space-x-4 h-auto p-8 border rounded-3xl border-none" style={{
+        <div id="content div" className="w-10/12 p-8 border rounded-3xl border-none space-y-4
+                                        lg:flex lg:space-x-4 lg:h-auto" style={{
             backgroundColor : "transparent",
             backgroundImage: "linear-gradient(120deg ,rgba(112,128,144,0.3),rgba(44, 62, 80 ,0.3)" }}>
-            <div id="left-section" className="space-y-10 w-2/5" >
+            <div id="left-section" className="space-y-10 w-2/5
+                                            lg:2/5" >
                 <div id="upper-section" className="space-y-1">
                     <div className=" px-3 text-sm h-fit tracking-widest text-white font-semibold w-fit flex py-1.5 border rounded-full">FAQ</div>
-                    <div className="text-white font-bold text-6xl">FREQUENTLY <br /> ASKED <br />QUESTION</div>
+                    <div className="text-white font-bold text-5xl w-fit
+                                    md:text-6xl 
+                                    lg:text-6xl">FREQUENTLY <br /> ASKED <br />QUESTION</div>
                 </div>
                
             </div>
 
-            <div id="right-section" className="w-3/5 space-y-4">
+            <div id="right-section" className="w-full space-y-4
+                                                lg:w-3/5">
                 {items.map(item => (
                     <div id="right-section" key={item.id} onClick={() => {
                         const id = item.id
