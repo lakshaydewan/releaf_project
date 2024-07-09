@@ -15,6 +15,7 @@ import { Egsheets } from './pages/main pages/egsheets';
 import { Studylyout } from './pages/main pages/studylayout';
 import { Profilepage } from './pages/main pages/profilepage';
 import { Studyresources } from './pages/main pages/studyresourcespage';
+import { Mycart } from './pages/main pages/mycart';
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
         <Route path="/assigment/egsheets" element={<Egsheets/>} />
         <Route path="/studylayout" element={<Studylyout/>} />
         <Route path="/profilepage" element={<Profilepage/>} />
-        <Route path="/studyresources" element={<Studyresources />} /> 
+        <Route path="/studyresources" element={<Studyresources />} />
+        <Route path="/Mycart" element={<Mycart />} /> 
 
       </Routes>
       </BrowserRouter>
