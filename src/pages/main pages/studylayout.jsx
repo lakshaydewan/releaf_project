@@ -10,8 +10,8 @@ function Studylyout() {
 
     return <div className="flex flex-col">
         <Navbar />
-        <div className="mt-[60px]">
-        <div className={`h-screen ${width} bg-white fixed top-0 mt-[65px] flex transition-all ease-in-out duration-1000`}>
+        <div className="mt-[48px]">
+        <div className={`h-screen ${width} bg-white fixed top-0 mt-[56px] flex transition-all ease-in-out duration-1000`}>
             <div>
                 {
                     (isopen) ? (
