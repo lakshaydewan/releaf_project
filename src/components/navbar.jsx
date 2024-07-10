@@ -9,7 +9,7 @@ function Navbar(){
     const username = (user) ?
     (user.name.split("")[0]) : ("");
 
-    return <div className="fixed top-0 w-full z-10 bg-[#0a0a0a]/85 backdrop-blur-xl border-b-[0.5px] border-white">
+    return <div className="sticky top-0 w-full z-10 bg-[#0a0a0a]/85 backdrop-blur-xl border-b-[0.5px] border-white">
         <div className="flex justify-between h-0 items-center py-7">
         <div className="flex w-48 h-full text-white items-center justify-center">LOGO</div>
         <div className="flex w-1/2 h-full items-center font-normal justify-center space-x-12">

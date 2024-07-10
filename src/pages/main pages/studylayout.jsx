@@ -10,7 +10,7 @@ function Studylyout() {
 
     return <div className="flex flex-col">
         <Navbar />
-        <div className="mt-[48px]">
+        <div className="p-0 mt-[-9px]">
         <div className={`h-screen ${width} bg-white fixed top-0 mt-[56px] flex transition-all ease-in-out duration-1000`}>
             <div>
                 {
@@ -32,7 +32,7 @@ function Studylyout() {
         </div>
         <div className="flex justify-between">
         <div className="w-[900px] p-3 h-screen flex flex-col space-y-4">
-            <iframe className="w-full h-[495px] border border-none rounded-3xl ml-[37px]" src="https://www.youtube.com/embed/z5yvZW8Ep-E?si=7SvG7BW7OH2n54nE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe className="w-[815px] h-[460px] border border-none rounded-lg ml-[38px]" src="https://www.youtube.com/embed/z5yvZW8Ep-E?si=7SvG7BW7OH2n54nE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <div className="w-full flex grow ">
                 <div className="w-1/2"></div>
                 <div className="w-1/2 space-y-2">
