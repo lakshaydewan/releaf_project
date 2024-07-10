@@ -15,14 +15,14 @@ function Navbar(){
         <div className="flex w-1/2 h-full items-center font-normal justify-center space-x-12">
             <div onClick={(e) => {
                 navigate("/")
-            }} className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-2 py-1 rounded-md">HOME</div>
+            }} className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-md">HOME</div>
             <div onClick={(e) => {
                 navigate("/assigment")
-            }} className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-2 py-1 rounded-md">ASSIGENMENTS</div>
+            }} className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-md">ASSIGENMENTS</div>
             <div onClick={(e) => {
                 navigate("/studyresources")
-            }} className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-2 py-1 rounded-md">RESOURCES</div>
-            <div className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-2 py-1 rounded-md">STORE</div>
+            }} className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-md">RESOURCES</div>
+            <div className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-md">STORE</div>
         </div>
         <div className="flex w-48 h-full items-center justify-center">
            {

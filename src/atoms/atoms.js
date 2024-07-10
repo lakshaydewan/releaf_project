@@ -10,3 +10,8 @@ export const branchatom = atom({
     key : 'branchatom',
     default : "",
 })
+
+export const WidthAtom = atom({
+    key: "WidthAtom",
+    default: "w-12"
+})
