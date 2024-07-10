@@ -2,7 +2,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 function Assigenmentscards(){
 
-    return <div className=" w-full space-y-8  flex justify-center">
+    return <div className="w-full space-y-8 flex justify-center">
        <div id="content div" className="w-10/12 flex flex-col items-center space-y-8">
             <div id="upper div" className="w-full flex justify-between">
                 <div id="left section" className="w-1/2">

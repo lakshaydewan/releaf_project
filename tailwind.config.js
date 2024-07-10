@@ -19,6 +19,9 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      backgroundImage: {
+        'custom-radial': 'radial-gradient(circle, #1a2a6c, #0a0a0a 70%)',
+      },
       width: {
         '48%': '48%',
       },
