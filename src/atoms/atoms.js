@@ -15,3 +15,8 @@ export const WidthAtom = atom({
     key: "WidthAtom",
     default: "w-12"
 })
+
+export const SideBarAtom = atom({
+    key: "SideBarAtom",
+    default: false
+})
