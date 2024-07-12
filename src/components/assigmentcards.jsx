@@ -4,8 +4,8 @@ import exp from "constants";
 
 function Assigenmentscards(){
 
-    return <div className=" w-full space-y-8  flex justify-center h-fit items-center">
-       <div id="content div" className="w-10/12 flex  flex-col items-center space-y-8">
+    return <div className=" w-full space-y-8  flex justify-center h-[700px] md:h-[1100px] border border-white py-6">
+       <div id="content div" className="w-10/12 flex  flex-col space-y-16">
             <div id="upper div" className="w-full flex justify-between">
                 <div id="left section" className="w-1/2">
                     <div id="text" className="w-4/5">
@@ -17,58 +17,31 @@ function Assigenmentscards(){
                     <div className="text-white text-2xl font-semibold">Get practical files, assignments, and EG sheets done for you, giving you more time to focus on what matters.</div>
                 </div>
             </div>
-            <div id="lower div" className="flex w-full justify-between">
-                <div className="w-4/12"><PinContainer
-                    title="/assignmets"
-                    href="/assigment/assigment"
-                >
-                    <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-                    <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                        Aceternity UI
-                    </h3>
-                    <div className="text-base !m-0 !p-0 font-normal">
-                        <span className="text-slate-500 ">
-                        Customizable Tailwind CSS and Framer Motion Components.
-                        </span>
-                    </div>
-                    <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
-                    <img src="src\assets\images\Screenshot 2024-07-04 230455.png" alt="" />
+            <div id="lower div" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="col-span-1 border w-[356px] h-[353px] py-16 border-white flex items-center"><PinContainer
+                        title="/assignmets"
+                        href="/assigment/assigment"
+                        containerClassName="w-[300px] ml-[16px]"
+                    ><div className=" relative w-[20rem] h-[20rem] ">
+                        <img src="src\assets\images\Screenshot 2024-07-04 230455.png" alt="" />
                     </div>
                 </PinContainer></div>
-                <div className="w-4/12"><PinContainer
-                    title="/practical-file"
-                    href="/assigment/practicalfile"
-                >
-                    <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-                    <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                        Aceternity UI
-                    </h3>
-                    <div className="text-base !m-0 !p-0 font-normal">
-                        <span className="text-slate-500 ">
-                        Customizable Tailwind CSS and Framer Motion Components.
-                        </span>
-                    </div>
-                    <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
-                    <img src="src\assets\images\Screenshot 2024-07-04 230455.png" alt="" />
+                <div className="col-span-1 border w-[356px] h-[353px] border-white "><PinContainer
+                        title="/assignmets"
+                        href="/assigment/assigment"
+                    ><div className=" relative w-[20rem] h-[20rem] ">
+                        <img src="src\assets\images\Screenshot 2024-07-04 230455.png" alt="" />
                     </div>
                 </PinContainer></div>
-                <div className="w-4/12"><PinContainer
-                    title="/EG-sheets"
-                    href="/assigment/egsheets"
-                >
-                    <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-                    <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                        Aceternity UI
-                    </h3>
-                    <div className="text-base !m-0 !p-0 font-normal">
-                        <span className="text-slate-500 ">
-                        Customizable Tailwind CSS and Framer Motion Components.
-                        </span>
-                    </div>
-                    <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
-                    <img src="src\assets\images\Screenshot 2024-07-04 230455.png" alt="" />
+                <div className="col-span-1 border w-[356px] h-[353px] border-white md:col-span-2 md:flex md:justify-center lg:col-span-1 "><PinContainer
+                        title="/assignmets"
+                        href="/assigment/assigment"
+                    ><div className=" relative w-[20rem] h-[20rem] ">
+                        <img src="src\assets\images\Screenshot 2024-07-04 230455.png" alt="" />
                     </div>
                 </PinContainer></div>
+
+                
             </div>
         </div>
     </div>

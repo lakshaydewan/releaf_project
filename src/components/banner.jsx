@@ -3,7 +3,7 @@ import { Movingborderbutton } from "./movingborder";
 import { GridBackground } from "./gridbackground";
 
 function Banner(){
-    return (<div>
+    return (<div className="h-screen relative">
         <GridBackground />
         <motion.div initial={{
         opacity: 0,
@@ -17,7 +17,7 @@ function Banner(){
         duration : 1,
     }}
     whileInView={{ opacity: 1 }}
-    className=" h-screen w-full relative z-5 flex justify-center">
+    className=" h-full w-full relative z-5 flex justify-center items-center">
                 <div className="flex w-1/2 text-4xl font-extrabold text-center text-white"><div><span className="text-blue-300">"Empowering</span> Your Academic Journey with Resources, News, and More!"</div>
                 </div>
             </motion.div>
