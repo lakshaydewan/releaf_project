@@ -69,21 +69,18 @@ function Studyresources(){
         </div>
         </div>
 
-        <div className={`${(visible) ? 'block' : 'hidden'} w-8/12 flex justify-between`}>
-            <div className="border border-white rounded-lg w-8/12 h-72 overflow-hidden overflow-y-scroll flex flex-col items-center">
-                <div className="text-white font-bold text-4xl w-full px-10 py-5">{subject}</div>
-                <div id="buttons" className="w-11/12 bg-gray-500 flex justify-between border border-none rounded-md p-3">
-                    <button className="text-white">THEORY</button>
-                    <button className="text-white">LAB</button>
-                    <button className="text-white">PRACTICALS</button>
-                    <button className="text-white">PYQS</button>
-                    <button className="text-white">BOOKS</button>
+        <div className={`${(visible) ? 'block' : 'hidden'} w-full flex justify-center`}>
+            <div className="border border-white rounded-lg w-[350px] h-72 overflow-hidden overflow-y-scroll flex flex-col items-center lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]">
+                <div className="text-white font-bold text-4xl w-full px-5 py-5">{subject}</div>
+                <div id="buttons" className="w-11/12 bg-gray-500 gird grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 border border-none rounded-md">
+                    <div className=" col-span-1 flex "><button className="text-white">THEORY</button></div>
+                    <div className=" col-span-1 flex "><button className="text-white">LAB</button></div>
+                    <div className=" col-span-1 flex "><button className="text-white">PRACTICALS</button></div>
+                    <div className=" col-span-1 flex "><button className="text-white">PYQS</button></div>
+                    <div className=" col-span-1 flex "><button className="text-white">BOOKS</button></div>
+                    <div className=" col-span-1 flex "><button className="text-white">Playlist</button></div>
                 </div>
                 <div></div>
-            </div>
-            <div className="border border-white rounded-lg w-3/12 h-72 ">
-            <div className="text-white font-bold text-2xl w-full px-10 py-5">SUBJECT DETAILS</div>
-
             </div>
         </div>
         
