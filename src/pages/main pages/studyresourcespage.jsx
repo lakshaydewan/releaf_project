@@ -25,8 +25,14 @@ function Studyresources(){
     return <div>
         <Navbar />
         <div className="w-full flex flex-col items-center p-20 space-y-4"> 
-        <div className="flex border border-white rounded-lg justify-around items-center w-8/12 h-16">
-            <div className="text-white text-2xl text-bold h-full flex items-center "> BTECH</div>
+        <div className="flex border border-white rounded-lg justify-around items-center w-[350px] h-12 
+        lg:min-w-[700px] lg:w-8/12 lg:h-16
+        md:w-[700px] md:h-16
+        sm:w-[500px] sm:h-16">
+            <div className="text-white text-xl text-bold h-full flex items-center
+            lg:text-white lg:text-2xl lg:text-bold lg:h-full lg:flex lg:items-center
+            md:text-white md:text-2xl md:text-bold md:h-full md:flex md:items-center
+            sm:text-white sm:text-2xl sm:text-bold sm:h-full sm:flex sm:items-center"> BTECH</div>
             <Dropdown content={"SEMESTER"} items={['1st','2nd','3rd','4th','5th','6th','7th',]} />
             <Dropdown content={"BRANCH"} items={['cse','IT','IOT','CSE-AIML','CSE-AIDS','ECE','EEE',]}/>
         </div>
@@ -56,7 +62,7 @@ function Studyresources(){
 
         <div className={`${(visible) ? 'block' : 'hidden'} w-8/12 flex justify-between`}>
             <div className="border border-white rounded-lg w-8/12 h-72 overflow-hidden overflow-y-scroll flex flex-col items-center">
-                <div className="text-white w-8/12 font-bold text-4xl w-full px-10 py-5">{subject}</div>
+                <div className="text-white font-bold text-4xl w-full px-10 py-5">{subject}</div>
                 <div id="buttons" className="w-11/12 bg-gray-500 flex justify-between border border-none rounded-md p-3">
                     <button className="text-white">THEORY</button>
                     <button className="text-white">LAB</button>

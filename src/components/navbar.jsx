@@ -19,7 +19,7 @@ function Navbar(){
         <div className="flex justify-between h-0 items-center py-7">
         <div className="flex w-48 h-full text-white items-center justify-center lg:hidden">
             <div className="flex justify-start w-28">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 cursor-pointer">
                 <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                 </svg>
             </div>
@@ -42,7 +42,7 @@ function Navbar(){
            {
             (user) ? (
                 <>
-                <div className="flex justify-end w-32">
+                <div className="flex justify-end w-32 lg:w-48 lg:justify-center">
                     <button onClick={() => {
                         navigate("/mycart")
                     }} className="w-8 h-8 border border-none rounded-full bg-white flex justify-center items-center mr-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">

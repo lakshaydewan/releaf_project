@@ -15,14 +15,17 @@ function Dropdown(props){
 
 
     return <div className="space-y-1 relative">
-        <button className="w-60 h-fit p-3  border border-none rounded-md text-center bg-white" onClick={() => {
+        <button className="w-28 h-fit p-1  border border-none rounded-md text-center bg-white
+        lg:w-60 lg:p-3
+        md:w-60 md:p-3
+        sm:w-40 sm:p-3" onClick={() => {
             setvisible(!visible)
         }}>{content}</button>
 
-        <div className={`${visible ? 'block' : 'hidden'} absolute border border-white rounded-2xl w-60 h-fit p-3`} style={{
+        <div className={`${visible ? 'block' : 'hidden'} absolute border border-white rounded-md w-28 h-fit p-3 lg:w-60 md:w-60 sm:w-40`} style={{
             backgroundImage: "linear-gradient(120deg ,rgba(112,128,144,1),rgba(44, 62, 80 ,1)" }}>
             {props.items.map(item => {
-                return <div key={item} className="h-8 flex items-center justify-center bg-transparent border border-none rounded-md text-white text-black cursor-pointer hover:bg-gray-500" onClick={() => {
+                return <div key={item} className="h-8 flex items-center justify-center bg-transparent border border-none rounded-md text-white  cursor-pointer hover:bg-gray-500" onClick={() => {
                     setvisible(false)
                     setcontent(item)
                     if(props.content == "SEMESTER"){
