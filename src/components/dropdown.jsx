@@ -15,10 +15,10 @@ function Dropdown(props){
 
 
     return <div className="space-y-1 relative">
-        <button className="w-28 h-fit p-1  border border-none rounded-md text-center bg-white
-        lg:w-60 lg:p-3
-        md:w-60 md:p-3
-        sm:w-40 sm:p-3" onClick={() => {
+        <button className="w-28 h-fit p-1 text-sm border border-none rounded-md text-center bg-white
+        lg:w-60 lg:p-3 lg:text-base
+        md:w-60 md:p-3 md:text-base
+        sm:w-40 sm:p-3 sm:text-base" onClick={() => {
             setvisible(!visible)
         }}>{content}</button>
 

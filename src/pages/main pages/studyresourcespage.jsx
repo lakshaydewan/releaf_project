@@ -24,7 +24,7 @@ function Studyresources(){
 
     return <div>
         <Navbar />
-        <div className="w-full flex flex-col items-center p-20 space-y-4"> 
+        <div className="w-full flex flex-col items-center py-20 px-5 space-y-4"> 
         <div className="flex border border-white rounded-lg justify-around items-center w-[350px] h-12 
         lg:min-w-[700px] lg:w-8/12 lg:h-16
         md:w-[700px] md:h-16
@@ -38,15 +38,24 @@ function Studyresources(){
         </div>
 
         <div className={`${!(semester == "" || branch == "") ? 'block' : 'hidden'} w-full flex justify-center overflow-hidden`}>
-        <div id="subject div" className='border border-white rounded-lg w-8/12 h-72 overflow-hidden overflow-y-scroll'>
+        <div id="subject div" className='border border-white rounded-lg w-[350px] h-72 overflow-hidden overflow-y-scroll lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]'>
             <div id="text" className="text-white font-bold text-4xl px-10 py-5">Subjects</div>
             <div id="subjects">
                 {listofsubjects.map(subject => {
                     if (subject.semester == semester && subject.branch == branch ){
-                        return <div className="grid grid-cols-3 gap-8 px-10">
+                        return <div className="grid grid-cols-2 gap-6 px-10
+                        sm:grid sm:grid-cols-2
+                        md:grid-cols-3
+                        lg:grid-cols-3">
                             {subject.value.map(values => {
-                            return <div className="bg-white w-60 h-10 flex items-center border border-none rounded-md">
-                                <button className="w-full text-center" onClick={() => {
+                            return <div className="bg-white max-w-40 max-h-10 min-w-32 h-8 flex items-center border border-none rounded-md
+                            lg:max-w-60 lg:max-h-10 lg:min-w-40 lg:min-h-10 
+                            md:max-w-60 md:max-h-10 md:min-w-40 md:min-h-10
+                            sm:max-w-60 sm:max-h-10 sm:min-w-40 sm:min-h-10">
+                                <button className="w-full text-center text-sm 
+                                sm:text-base
+                                md:text-base
+                                lg:text-base" onClick={() => {
                                     setvisible(true)
                                     setsubject(values)
                                 }
