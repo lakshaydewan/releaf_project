@@ -39,14 +39,14 @@ function Studyresources(){
 
         <div className={`${!(semester == "" || branch == "") ? 'block' : 'hidden'} w-full flex justify-center overflow-hidden`}>
         <div id="subject div" className='border border-white rounded-lg w-[350px] h-72 overflow-hidden overflow-y-scroll lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]'>
-            <div id="text" className="text-white font-bold text-4xl px-10 py-5">Subjects</div>
+            <div id="text" className="text-white font-bold text-4xl sm:px-10 lg:px-10 md:px-10 px-5 py-5">Subjects</div>
             <div id="subjects">
                 {listofsubjects.map(subject => {
                     if (subject.semester == semester && subject.branch == branch ){
-                        return <div className="grid grid-cols-2 gap-6 px-10
-                        sm:grid sm:grid-cols-2
-                        md:grid-cols-3
-                        lg:grid-cols-3">
+                        return <div className="grid grid-cols-2 gap-6 px-5
+                        sm:grid sm:grid-cols-2 sm:px-10
+                        md:grid-cols-3 md:px-10
+                        lg:grid-cols-3 lg:px-10">
                             {subject.value.map(values => {
                             return <div className="bg-white max-w-40 max-h-10 min-w-32 h-8 flex items-center border border-none rounded-md
                             lg:max-w-60 lg:max-h-10 lg:min-w-40 lg:min-h-10 
