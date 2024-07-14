@@ -72,13 +72,13 @@ function Studyresources(){
         <div className={`${(visible) ? 'block' : 'hidden'} w-full flex justify-center`}>
             <div className="border border-white rounded-lg w-[350px] h-72 overflow-hidden overflow-y-scroll flex flex-col items-center lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]">
                 <div className="text-white font-bold text-4xl w-full px-5 py-5">{subject}</div>
-                <div id="buttons" className="w-11/12 bg-gray-500 gird grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 border border-none rounded-md">
-                    <div className=" col-span-1 flex "><button className="text-white">THEORY</button></div>
-                    <div className=" col-span-1 flex "><button className="text-white">LAB</button></div>
-                    <div className=" col-span-1 flex "><button className="text-white">PRACTICALS</button></div>
-                    <div className=" col-span-1 flex "><button className="text-white">PYQS</button></div>
-                    <div className=" col-span-1 flex "><button className="text-white">BOOKS</button></div>
-                    <div className=" col-span-1 flex "><button className="text-white">Playlist</button></div>
+                <div id="buttons" className="w-11/12 grid grid-cols-3 h-fit lg:h-10 lg:grid-cols-6 bg-gray-500 border border-none rounded-md">
+                    <div className="w-full flex justify-center"><button className="text-white">THEORY</button></div>
+                    <div className="w-full flex justify-center"><button className="text-white">LAB</button></div>
+                    <div className="w-full flex justify-center"><button className="text-white">PRACTICALS</button></div>
+                    <div className="w-full flex justify-center"><button className="text-white">PYQS</button></div>
+                    <div className="w-full flex justify-center"><button className="text-white">BOOKS</button></div>
+                    <div className="w-full flex justify-center"><button className="text-white">PLAYLIST</button></div>
                 </div>
                 <div></div>
             </div>
