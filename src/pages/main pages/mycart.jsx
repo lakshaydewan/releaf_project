@@ -19,9 +19,11 @@ function Mycart(){
     ]
 
 
-    return <div className="flex flex-col relative h-full">
+    return <div className="flex flex-col h-full">
         <Navbar />
         <div className="text-3xl font-bold text-white pt-5 pb-10 px-5">My Cart</div>
+        <div className="flex w-full relative ">
+        <div className="w-full md:w-8/12 overflow-auto">
         {productlist.map(item => {
                 return( <div className="flex w-full">
             <div id="productlist" className="w-full flex flex-col">
@@ -51,18 +53,23 @@ function Mycart(){
         </div>)
         
     })}
+    </div>
         
         
-         <div className="w-full flex  flex-col  items-center bg-black fixed bottom-0 ">
+         <div className=" w-full flex  flex-col  items-center bg-black fixed bottom-0
+         md:w-4/12 md:sticky md:right-0 md:top-0 md:border md:border-white md:h-full">
             <div className="text-white w-full flex justify-end ">
-                <div className="w-4/12 py-1 px-4 flex justify-between">
+                <div className="w-4/12 py-1 px-4 flex justify-between
+                md:w-6/12 ">
                 <div>total</div>
                 <div>Rs.500</div>
                 </div>
             </div>
             <div className="w-full h-[100px] flex justify-center items-center"><button className="bg-white w-11/12 h-[50px] rounded-md">CHECKOUT</button></div>
         </div>
+        </div>
     </div>
+
 }
 
 export {Mycart}
