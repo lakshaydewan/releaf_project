@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Navbar } from "../../components/navbar";
 import { Assigmentpagebanner } from "../../components/assigmentpagebanner";
 import { Productlist } from "../../components/assignment-page-productlist";
+import { Sidemenubar } from "../../components/sidemenubar";
 
 function Assigenmentpage(){
     const { user, loginWithRedirect,logout } = useAuth0();
@@ -19,6 +20,7 @@ function Assigenmentpage(){
 
     return <div className=" space-y-8">
         <Navbar />
+        <Sidemenubar />
         <Assigmentpagebanner />
         <Productlist />
 

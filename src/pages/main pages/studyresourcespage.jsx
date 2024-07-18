@@ -1,8 +1,9 @@
 import { useRecoilValue } from "recoil";
 import { Dropdown } from "../../components/dropdown";
 import { Navbar } from "../../components/navbar";
-import { branchatom, semesteratom } from "../../atoms/atoms";
+import { branchatom, semesteratom, SideBarAtom } from "../../atoms/atoms";
 import { useState } from "react";
+import { Sidemenubar } from "../../components/sidemenubar";
 
 
 function Studyresources(){
@@ -24,6 +25,7 @@ function Studyresources(){
 
     return <div>
         <Navbar />
+        <Sidemenubar />
         <div className="w-full flex flex-col items-center py-20 px-5 space-y-4"> 
         <div className="flex border border-white rounded-lg justify-around items-center w-[350px] h-12 
         lg:min-w-[700px] lg:w-8/12 lg:h-16

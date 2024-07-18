@@ -1,4 +1,5 @@
 import { Navbar } from "../../components/navbar";
+import { Sidemenubar } from "../../components/sidemenubar";
 
 
 
@@ -21,6 +22,7 @@ function Mycart(){
 
     return <div className="flex flex-col h-full">
         <Navbar />
+        <Sidemenubar />
         <div className="text-3xl font-bold text-white pt-5 pb-10 px-5">My Cart</div>
         <div className="flex w-full relative ">
         <div className="w-full md:w-8/12 overflow-auto">

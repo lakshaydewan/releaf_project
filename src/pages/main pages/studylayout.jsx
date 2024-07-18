@@ -1,6 +1,7 @@
 import { useRecoilState } from "recoil"
 import { Navbar } from "../../components/navbar"
 import { SideBarAtom, WidthAtom } from "../../atoms/atoms"
+import { Sidemenubar } from "../../components/sidemenubar";
 
 
 
@@ -10,6 +11,7 @@ function Studylyout() {
 
     return <div className="flex flex-col">
         <Navbar />
+        <Sidemenubar />
         <div className="p-0 mt-[-9px]">
         <div className={`h-screen ${width} bg-white fixed top-0 mt-[56px] flex transition-all ease-in-out duration-1000`}>
             <div>

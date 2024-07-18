@@ -1,4 +1,5 @@
 import { Navbar } from "../../components/navbar"
+import { Sidemenubar } from "../../components/sidemenubar"
 
 
 
@@ -7,6 +8,7 @@ function Profilepage(){
 
     return <div>
         <Navbar />
+        <Sidemenubar />
         <div id="main" className="flex justify-center">
         <div id="content div" className="w-full flex flex-col justify-center " style={{
             backgroundColor : "transparent",

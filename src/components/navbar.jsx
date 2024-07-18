@@ -25,7 +25,7 @@ function Navbar(){
             <div className="flex justify-start w-28">
                 <button className="w-fit" onClick={() => {
                     if (width == "w-0"){
-                        setWidth("w-44")
+                        setWidth("w-60")
                     }else{
                         setWidth("w-0")
                     }
