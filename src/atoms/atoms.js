@@ -13,7 +13,7 @@ export const branchatom = atom({
 
 export const WidthAtom = atom({
     key: "WidthAtom",
-    default: "w-12"
+    default: "w-0"
 })
 
 export const SideBarAtom = atom({
