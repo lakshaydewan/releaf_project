@@ -29,7 +29,7 @@ function Sidemenubar(){
 
     
 
-    return <div className={`h-screen ${width} lg-hidden lg-w-0 bg-white fixed top-[24px] flex transition-all ease-in-out duration-1000 z-[5] space-y-3 overflow-hidden`}>
+    return <div className={`h-screen ${width} lg-hidden lg-w-0 bg-white fixed top-[56px] flex transition-all ease-in-out duration-1000 z-[5] space-y-3 overflow-hidden`}>
         <div className="h-full w-full">
             <button onClick={() => {
                 setWidth("w-0")

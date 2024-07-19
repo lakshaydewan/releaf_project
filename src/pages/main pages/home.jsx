@@ -26,7 +26,7 @@ function Home(){
 
 
     
-    return <div className="bg-black space-y-8">
+    return <div className="bg-black ">
         <Navbar />
         <Sidemenubar />
         <Banner />

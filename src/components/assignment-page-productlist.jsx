@@ -5,10 +5,10 @@ function Productlist(){
     const navigate = useNavigate()
 
 
-    return <div className="w-full h-fit  flex justify-center py-6 ">
+    return <div className="w-full  flex justify-center py-6 ">
         <div id="content div" className="w-10/12 space-y-20">
         <div id="heading" className="text-white font-bold text-5xl text-center"> what we make</div>
-            <div id="subcontendiv" className="flex flex-col items-center w-full space-x-4 h-fit p-8 border rounded-3xl border-none
+            <div id="subcontendiv" className=" h-[500px] flex flex-col items-center w-full space-x-4  p-8 border rounded-3xl border-none
             lg:flex-row lg:space-x-4 lg:p-8
             md:flex-row md:space-x-4 md:p-8" style={{
             backgroundColor : "transparent",

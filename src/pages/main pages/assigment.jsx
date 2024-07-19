@@ -18,7 +18,7 @@ function Assigenmentpage(){
         
     })
 
-    return <div className=" space-y-8">
+    return <div className="">
         <Navbar />
         <Sidemenubar />
         <Assigmentpagebanner />
