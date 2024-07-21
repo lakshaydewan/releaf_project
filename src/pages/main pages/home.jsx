@@ -8,6 +8,7 @@ import PinComponent from "../../components/PinComponent";
 import Section from "../../components/section";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Sidemenubar } from "../../components/sidemenubar";
+import { Herosection } from "../../components/herosection";
 
 //#755ae2
 function Home(){
@@ -29,8 +30,7 @@ function Home(){
     return <div className="bg-black ">
         <Navbar />
         <Sidemenubar />
-        <Banner />
-        <Section></Section>
+        <Herosection />
         <Assigenmentscards />
         <News />
         <FAQ />
