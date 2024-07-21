@@ -8,7 +8,7 @@ const Herosection = () => {
         id="hero">
             <div className=" relative">
                 <div className="relative z-[1] max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
-                    <h1 className="mb-6 text-white font-bold text-3xl md:text-5xl lg:text-5xl xl:text-5xl mt-8 px-8 lg:mt-16  ">
+                    <h1 className="mb-6 text-white font-bold text-3xl md:text-5xl lg:text-5xl xl:text-5xl px-8 -mt-8 lg:mt-16  ">
                         Lorem ipsum dolor sit amet consectetur, adipisicing 
                         <span className="inline-block relative"  style={{
           background: 'linear-gradient(to right, #12c2e9, #c471ed, #f64f59)',
