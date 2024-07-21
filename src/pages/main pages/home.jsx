@@ -10,6 +10,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Sidemenubar } from "../../components/sidemenubar";
 import { Herosection } from "../../components/herosection";
 import { Bentogrid } from "../../components/bentogrid";
+import { Section1 } from "../../components/sectionnew";
 
 //#755ae2
 function Home(){
@@ -35,7 +36,10 @@ function Home(){
         <Bentogrid />
         <Assigenmentscards />
         <News />
+        <Section1 custompaddings="py-5" classname="pt-[12rem] -mt-[5.25rem]" id="faq ">
         <FAQ />
+        </Section1>
+        
         <PinComponent />
     </div>
 }
