@@ -68,7 +68,7 @@ function Navbar(){
                 </div>
                 ) : (
                     <div className="w-32 flex justify-end lg:w-48 lg:justify-center">
-                        <Loginbutton content={"Signup"} ONClick={() => {
+                        <Loginbutton content={"sign up"} ONClick={() => {
                     console.log("hello it reaches here")
                     loginWithRedirect()
                 }} />
