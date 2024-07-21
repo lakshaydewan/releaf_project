@@ -1,9 +1,10 @@
 import { Loginbutton } from "./button"
+import { Section1 } from "./sectionnew"
 
 
 const Herosection = () => {
     return(
-        <section classname="pt-[12rem] -mt-[5.25rem]"
+        <Section1 classname="pt-[12rem] -mt-[5.25rem]"
         id="hero">
             <div className=" relative">
                 <div className="relative z-[1] max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
@@ -31,7 +32,7 @@ const Herosection = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section1>
     )
 }
 

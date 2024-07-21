@@ -9,6 +9,7 @@ import Section from "../../components/section";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Sidemenubar } from "../../components/sidemenubar";
 import { Herosection } from "../../components/herosection";
+import { Bentogrid } from "../../components/bentogrid";
 
 //#755ae2
 function Home(){
@@ -31,6 +32,7 @@ function Home(){
         <Navbar />
         <Sidemenubar />
         <Herosection />
+        <Bentogrid />
         <Assigenmentscards />
         <News />
         <FAQ />
