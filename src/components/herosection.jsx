@@ -7,7 +7,7 @@ const Herosection = () => {
         <Section1 classname="pt-[12rem] -mt-[5.25rem]" 
         id="hero">
             <div className=" relative">
-                <div className="relative z-[1] max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
+                <div className="relative z-[1] max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[3rem]">
                     <h1 className="mb-6 text-white font-bold text-3xl md:text-5xl lg:text-5xl xl:text-5xl px-8 -mt-8 lg:mt-16  ">
                         Lorem ipsum dolor sit amet consectetur, adipisicing 
                         <span className="inline-block relative"  style={{
@@ -27,8 +27,19 @@ const Herosection = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="absolute top-[10%] lg:-top-[1%] left-1/2 w-[200%] -translate-x-1/2 md:w-[150%] flex justify-center">
-                     <div className="lg:w-[800px] lg:h-[400px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[200px]"></div>
+                    {/* <div className="absolute top-[10%] lg:top-[20%] left-1/2 w-[200%] -translate-x-1/2 md:w-[150%] flex justify-center">
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                    </div>
+                    <div className="absolute top-[10%] lg:top-[20%] left-1/2 w-[200%] -translate-x-1/2 md:w-[150%] flex justify-center">
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                    </div>
+                    <div className="absolute top-[10%] lg:top-[20%] left-1/2 w-[200%] -translate-x-1/2 md:w-[150%] flex justify-center">
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[200px]"></div>
+                    </div> */}
+                    <div className="absolute top-[10%] lg:top-[20%] left-1/2 w-[200%] -translate-x-1/2 md:w-[150%] flex justify-center">
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
                     </div>
                 </div>
             </div>
