@@ -22,7 +22,7 @@ function FAQ(){
     return <motion.div ref={ref} initial={{opacity:0, scale:0.8}} whileInView={{ opacity: 1, scale:1 }} transition={{
         duration : 0.5,
         delay : 0.3
-    }} className="w-full h-screen flex items-center justify-center">
+    }} className="w-full flex items-center justify-center">
         <div id="content div" className="w-10/12 p-8 border rounded-3xl border-none space-y-4
                                         lg:flex lg:space-x-4 lg:h-auto" style={{
             backgroundColor : "transparent",
@@ -47,7 +47,7 @@ function FAQ(){
                             ...item,
                             isExpanded: item.id === id ? !item.isExpanded : item.isExpanded
                           })));
-                    }} className="bg-gray-700 w-full cursor-pointer text-white font-semibold text-xl h-fit border border rounded-2xl space-y-4 p-6">
+                    }} className="bg-gray-700 w-full cursor-pointer text-white font-semibold text-xl h-fit border rounded-2xl space-y-4 p-6">
                         <div className="flex justify-between">
                             <div>{item.question}</div>
                             <div>+</div>

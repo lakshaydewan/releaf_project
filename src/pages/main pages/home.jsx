@@ -35,9 +35,8 @@ function Home(){
         <Sidemenubar />
         <Herosection />
         <Bentogrid />
-        <Assigenmentscards />
         <Imageslider />
-        <Section1 custompaddings="py-5" classname="pt-[12rem] -mt-[5.25rem]" id="faq ">
+        <Section1 custompaddings="py-10" classname="pt-0 mt-[4rem]" id="faq ">
         <FAQ />
         </Section1>
         

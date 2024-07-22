@@ -17,7 +17,7 @@ const Bentogrid = () => {
           color: 'transparent'}} > STUDY MATERIAL</span>
                     </h1>
                 </div>
-                <div className="w-10/12 aspect-[512/1600] sm:aspect-[512/1024] md:aspect-[1024/600] gap-4 grid grid-cols-1 grid-rows-12 md:grid-cols-5 md:grid-rows-6  ">
+                <div className="w-10/12 aspect-[512/1600] sm:aspect-[512/1024] md:aspect-[1024/600] gap-4 grid grid-cols-1 grid-rows-12 md:grid-cols-5 md:grid-rows-5  ">
                     <div className="row-start-1 row-end-6 md:col-start-1 md:col-end-4 bg-blue-500 border border-none rounded-3xl">czcz</div>
                     <div className="row-start-6 row-end-10 md:row-start-1 md:row-end-4 md:col-start-4 md:col-end-6 bg-red-500 border-none rounded-3xl">sfds</div>
                     <div className="row-start-10 row-end-12 md:row-start-4 md:row-end-6 md:col-start-4 md:col-end-6 bg-green-500 border-none rounded-3xl">sdfsd</div>
