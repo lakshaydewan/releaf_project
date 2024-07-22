@@ -4,7 +4,7 @@ import { Section1 } from "./sectionnew"
 
 const Herosection = () => {
     return(
-        <Section1 classname="pt-[12rem] -mt-[5.25rem]"
+        <Section1 classname="pt-[12rem] -mt-[5.25rem]" 
         id="hero">
             <div className=" relative">
                 <div className="relative z-[1] max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
@@ -27,8 +27,8 @@ const Herosection = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="absolute -top-[5%] left-1/2 w-[200%] -translate-x-1/2 md:w-[150%]">
-                        {/* <img className="w-full" width={1440} height={1800} src="src\assets\images\Screenshot 2024-07-21 213233.png" alt="heor background" /> */}
+                    <div className="absolute top-[10%] lg:-top-[1%] left-1/2 w-[200%] -translate-x-1/2 md:w-[150%] flex justify-center">
+                     <div className="lg:w-[800px] lg:h-[400px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[200px]"></div>
                     </div>
                 </div>
             </div>
