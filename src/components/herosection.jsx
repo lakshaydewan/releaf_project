@@ -36,10 +36,10 @@ const Herosection = () => {
                     <div className="absolute top-[10%] lg:top-[20%] left-1/2 w-[200%] -translate-x-1/2 md:w-[150%] flex justify-center">
                      <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[200px]"></div>
                     </div> */}
-                    <div className="absolute top-[10%] lg:top-[20%] left-1/2 w-[200%] -translate-x-1/2 md:w-[150%] flex justify-center">
-                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
-                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
-                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                    <div className="absolute top-[10%] lg:top-[20%] left-[49%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center ">
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
                     </div>
                 </div>
             </div>
