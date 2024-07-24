@@ -19,8 +19,8 @@ function Navbar(){
     const username = (user) ?
     (user.name.split("")[0]) : ("");
 
-    return <div className="sticky top-0 w-full z-10 bg-[#0a0a0a]/85 backdrop-blur-xl border-b-[0.5px] border-white">
-        <div className="flex justify-between h-0 items-center py-7">
+    return <div className="sticky top-0 w-full z-10 bg-black barlow-condensed-bold">
+        <div className="flex justify-between h-0 items-center py-8">
         <div className="flex w-48 h-full text-white items-center justify-center lg:hidden">
             <div className="flex justify-start w-28">
                 <button className="w-fit" onClick={() => {
@@ -39,17 +39,18 @@ function Navbar(){
         </div>
         <div className="flex w-48 h-full text-white items-center justify-center">LOGO</div>
         <div className="font-normal hidden 
-                        lg:flex lg:w-1/2 lg:h-full lg:items-center lg:justify-center lg:space-x-12 lg:visible ">
+                        lg:flex lg:w-1/2 lg:h-full lg:items-center lg:justify-center lg:space-x-0 lg:visible ">
             <div onClick={(e) => {
                 navigate("/")
-            }} className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-md">HOME</div>
+            }} className="text-[#838383] text-lg hover:text-white cursor-pointer duration-200 hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-lg font-normal">Home</div>
             <div onClick={(e) => {
                 navigate("/assigment")
-            }} className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-md">ASSIGENMENTS</div>
+            }} className="text-[#838383] text-lg hover:text-white cursor-pointer duration-200 hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-lg font-normal">Playlists</div>
             <div onClick={(e) => {
                 navigate("/studyresources")
-            }} className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-md">RESOURCES</div>
-            <div className="hover:font-medium text-[#838383] text-sm hover:text-white cursor-pointer duration-200 hover:underline hover:underline-offset-[8px] hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-md">STORE</div>
+            }} className="text-[#838383] text-lg hover:text-white cursor-pointer duration-200 hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-lg font-normal">Resources</div>
+            <div className="text-[#838383] text-lg hover:text-white cursor-pointer duration-200 hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-lg font-normal">Store</div>
+            <div className="text-[#838383] text-lg hover:text-white cursor-pointer duration-200 hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-lg font-normal">Info</div>
         </div>
         <div className="flex w-48 h-full items-center justify-center ">
             {isLoading ? 
