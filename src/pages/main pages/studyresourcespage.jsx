@@ -1,15 +1,26 @@
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { Dropdown } from "../../components/dropdown";
 import { Navbar } from "../../components/navbar";
 import { branchatom, semesteratom, SideBarAtom } from "../../atoms/atoms";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Sidemenubar } from "../../components/sidemenubar";
+import { useLocation, useNavigate} from "react-router-dom"
+
+
 
 
 function Studyresources(){
 
-    const semester = useRecoilValue(semesteratom)
-    const branch = useRecoilValue(branchatom)
+    const navigate = useNavigate();
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const selectedsemester = queryParams.get('semester') || '';
+    const selectedbranch = queryParams.get('branch') || '';
+
+    //this commented area is also previously used
+
+    // const [semester,setsemester] = useRecoilState(semesteratom)
+    // const [branch,setbranch] = useRecoilState(branchatom)
     const [subject,setsubject] = useState("");
     const [visible,setvisible] = useState(false)
 
@@ -23,6 +34,21 @@ function Studyresources(){
 
     ]
 
+
+    const handleValueReturnforsemster = (value) => {
+        const semesterdisplay = value
+        const newsemester = semesterdisplay;
+        queryParams.set('semester', newsemester);
+        navigate({ search: queryParams.toString() });
+      };
+    
+      const handleValueReturnforbranch = (value) => {
+        const branchdisplay = value
+        const newbranch = branchdisplay;
+        queryParams.set('branch', newbranch);
+        navigate({ search: queryParams.toString() });
+      };
+
     return <div>
         <Navbar />
         <Sidemenubar />
@@ -35,16 +61,17 @@ function Studyresources(){
             lg:text-white lg:text-2xl lg:text-bold lg:h-full lg:flex lg:items-center
             md:text-white md:text-2xl md:text-bold md:h-full md:flex md:items-center
             sm:text-white sm:text-2xl sm:text-bold sm:h-full sm:flex sm:items-center"> BTECH</div>
-            <Dropdown content={"SEMESTER"} items={['1st','2nd','3rd','4th','5th','6th','7th',]} />
-            <Dropdown content={"BRANCH"} items={['cse','IT','IOT','CSE-AIML','CSE-AIDS','ECE','EEE',]}/>
+            {/* onvaluereturn and content2 are new props added */}
+            <Dropdown content={"SEMESTER"} items={['1st','2nd','3rd','4th','5th','6th','7th',]} onValueReturn={handleValueReturnforsemster} content2={selectedsemester}/>
+            <Dropdown content={"BRANCH"} items={['cse','IT','IOT','CSE-AIML','CSE-AIDS','ECE','EEE',]} onValueReturn={handleValueReturnforbranch} content2={selectedbranch}/>
         </div>
-
-        <div className={`${!(semester == "" || branch == "") ? 'block' : 'hidden'} w-full flex justify-center overflow-hidden`}>
+        {/* here the state is used previously in place of selected semster and selected branch but now no state is used this part is basically to check which semester is selceted and which subjects to display */}
+        <div className={`${!(selectedsemester == "" || selectedbranch == "") ? 'block' : 'hidden'} w-full flex justify-center overflow-hidden`}>
         <div id="subject div" className='border border-white rounded-lg w-[350px] h-72 overflow-hidden overflow-y-scroll lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]'>
             <div id="text" className="text-white font-bold text-4xl sm:px-10 lg:px-10 md:px-10 px-5 py-5">Subjects</div>
             <div id="subjects">
                 {listofsubjects.map(subject => {
-                    if (subject.semester == semester && subject.branch == branch ){
+                    if (subject.semester == selectedsemester && subject.branch == selectedbranch ){
                         return <div className="grid grid-cols-2 gap-6 px-5
                         sm:grid sm:grid-cols-2 sm:px-10
                         md:grid-cols-3 md:px-10
