@@ -22,11 +22,11 @@ export const SideBarAtom = atom({
 })
 
 export const WidthAtom2 = atom({
-    key: "WidthAtom",
+    key: "WidthAtom2",
     default: "w-0"
 })
 
 export const SideBarAtom2 = atom({
-    key: "SideBarAtom",
+    key: "SideBarAtom2",
     default: false
 })

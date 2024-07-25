@@ -3,6 +3,8 @@ import { Navbar } from "../../components/navbar"
 import { SideBarAtom, SideBarAtom2, WidthAtom, WidthAtom2 } from "../../atoms/atoms"
 import { Sidemenubar } from "../../components/sidemenubar";
 import { Sidemenubar2 } from "../../components/sidemenubar2";
+import { useEffect } from "react";
+
 
 
 
@@ -10,16 +12,24 @@ function Studylyout() {
     const [width, setWidth] = useRecoilState(WidthAtom);
     const [isopen, setIsopen] = useRecoilState(SideBarAtom);
     const [width2, setwidth2] = useRecoilState(WidthAtom2);
-    const [isopen2, setisopen2] = useRecoilState(SideBarAtom2)
+    const [isopen2, setisopen2] = useRecoilState(SideBarAtom2);
+    const queryParams = new URLSearchParams(location.search);
+    const videolink = queryParams.get('link') || '';
 
-    return <div className="flex flex-col">
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
+
+
+    return <div className="flex flex-col bg-fuchsia-50">
         <Navbar />
         <Sidemenubar />
         <Sidemenubar2 />
         <div className="p-0 mt-[-9px]">
         <div className="flex justify-between">
         <div className="w-3/5 p-3 h-screen flex flex-col space-y-2">
-            <iframe className="w-full aspect-[16/9] border border-none rounded-lg " src="https://www.youtube.com/embed/z5yvZW8Ep-E?si=7SvG7BW7OH2n54nE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe className="w-full aspect-[16/9] border border-none rounded-lg" src={videolink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <div className="w-full flex grow ">
                 <div className="w-1/2"></div>
                 <div className="w-1/2 space-y-2">

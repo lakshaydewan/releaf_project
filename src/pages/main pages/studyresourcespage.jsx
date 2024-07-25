@@ -5,6 +5,7 @@ import { branchatom, semesteratom, SideBarAtom } from "../../atoms/atoms";
 import { useEffect, useState } from "react";
 import { Sidemenubar } from "../../components/sidemenubar";
 import { useLocation, useNavigate} from "react-router-dom"
+import { playlistlinks } from "../../assets/links/links";
 
 
 
@@ -101,15 +102,26 @@ function Studyresources(){
         <div className={`${(visible) ? 'block' : 'hidden'} w-full flex justify-center`}>
             <div className="border border-white rounded-lg w-[350px] h-72 overflow-hidden overflow-y-scroll flex flex-col items-center lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]">
                 <div className="text-white font-bold text-4xl w-full px-5 py-5">{subject}</div>
-                <div id="buttons" className="w-11/12 grid grid-cols-3 h-fit lg:h-10 lg:grid-cols-6 bg-gray-500 border border-none rounded-md">
+                <div id="buttons" className="w-11/12 grid grid-cols-4 h-fit lg:h-10  bg-gray-500 border border-none rounded-md">
                     <div className="w-full flex justify-center"><button className="text-white">THEORY</button></div>
                     <div className="w-full flex justify-center"><button className="text-white">LAB</button></div>
-                    <div className="w-full flex justify-center"><button className="text-white">PRACTICALS</button></div>
-                    <div className="w-full flex justify-center"><button className="text-white">PYQS</button></div>
-                    <div className="w-full flex justify-center"><button className="text-white">BOOKS</button></div>
-                    <div className="w-full flex justify-center"><button className="text-white">PLAYLIST</button></div>
+                    <div className="w-full flex justify-center"><button className="text-white">Pdfs</button></div>
+                    <div onClick={() => {
+                        
+                    }} className="w-full flex justify-center"><button className="text-white">PLAYLIST</button></div>
+                    </div>
+                <div className=" grid grid-cols-3 gap-4">
+                    {playlistlinks[0].semster1.applied_maths.unit1.map((items) => {
+                    return(
+                        <button onClick={() => {
+                            navigate("/studylayout" + "?link=" + items.src)
+                        }} className="h-20 w-20 col-span-1">
+                            <div className="h-16 w-20 bg-orange-400"></div>
+                            <div className="h-4 w-20 text-white">{items.title}</div>
+                        </button>
+                    )
+                    })}
                 </div>
-                <div></div>
             </div>
         </div>
         
