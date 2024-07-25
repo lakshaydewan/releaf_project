@@ -13,6 +13,7 @@ import { Bentogrid } from "../../components/bentogrid";
 import { Section1 } from "../../components/sectionnew";
 import { Imageslider } from "../../components/imageslider";
 import { Productsection } from "../../components/productsecction";
+import Footer from "../../components/Footer";
 
 //#755ae2
 function Home(){
@@ -41,7 +42,7 @@ function Home(){
         <Section1 custompaddings="py-10" classname="pt-0 mt-[4rem]" id="faq ">
         <FAQ />
         </Section1>
-
+        <Footer></Footer>
         
     </div>
 }
