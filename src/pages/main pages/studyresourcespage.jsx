@@ -17,13 +17,14 @@ function Studyresources(){
     const queryParams = new URLSearchParams(location.search);
     const selectedsemester = queryParams.get('semester') || '';
     const selectedbranch = queryParams.get('branch') || '';
+    const selcetedsubject =  queryParams.get('subject') || '';
 
     //this commented area is also previously used
 
     // const [semester,setsemester] = useRecoilState(semesteratom)
     // const [branch,setbranch] = useRecoilState(branchatom)
-    const [subject,setsubject] = useState("");
-    const [visible,setvisible] = useState(false)
+    // const [subject,setsubject] = useState("");
+    // const [visible,setvisible] = useState(false)
 
     const listofsubjects = [
         { id:1 ,semester:'1st', branch:'IT',  value:['APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
@@ -68,7 +69,7 @@ function Studyresources(){
         </div>
         {/* here the state is used previously in place of selected semster and selected branch but now no state is used this part is basically to check which semester is selceted and which subjects to display */}
         <div className={`${!(selectedsemester == "" || selectedbranch == "") ? 'block' : 'hidden'} w-full flex justify-center overflow-hidden`}>
-        <div id="subject div" className='border border-white rounded-lg w-[350px] h-72 overflow-hidden overflow-y-scroll lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]'>
+        <div id="subject div" className='border border-white rounded-lg w-[350px] h-60 overflow-hidden overflow-y-scroll lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]'>
             <div id="text" className="text-white font-bold text-4xl sm:px-10 lg:px-10 md:px-10 px-5 py-5">Subjects</div>
             <div id="subjects">
                 {listofsubjects.map(subject => {
@@ -86,8 +87,9 @@ function Studyresources(){
                                 sm:text-base
                                 md:text-base
                                 lg:text-base" onClick={() => {
-                                    setvisible(true)
-                                    setsubject(values)
+                                    // setvisible(true)
+                                    queryParams.set('subject', values);
+                                    navigate({ search: queryParams.toString() });
                                 }
                                 }>{values}</button>
                             </div>
@@ -98,10 +100,10 @@ function Studyresources(){
             </div>
         </div>
         </div>
-
-        <div className={`${(visible) ? 'block' : 'hidden'} w-full flex justify-center`}>
-            <div className="border border-white rounded-lg w-[350px] h-72 overflow-hidden overflow-y-scroll flex flex-col items-center lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]">
-                <div className="text-white font-bold text-4xl w-full px-5 py-5">{subject}</div>
+        {/* visible is removed from selected subject */}
+        <div className={`${(selcetedsubject) ? 'block' : 'hidden'} w-full flex justify-center`}>
+            <div className="border border-white rounded-lg w-[350px] h-80 overflow-hidden overflow-y-scroll flex flex-col items-center lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]">
+                <div className="text-white font-bold text-4xl w-full px-5 py-5">{selcetedsubject}</div>
                 <div id="buttons" className="w-11/12 grid grid-cols-4 h-fit lg:h-10  bg-gray-500 border border-none rounded-md">
                     <div className="w-full flex justify-center"><button className="text-white">THEORY</button></div>
                     <div className="w-full flex justify-center"><button className="text-white">LAB</button></div>
@@ -110,15 +112,17 @@ function Studyresources(){
                         
                     }} className="w-full flex justify-center"><button className="text-white">PLAYLIST</button></div>
                     </div>
-                <div className=" grid grid-cols-3 gap-4">
+                <div className=" w-10/12  grid grid-cols-4 gap-4 pt-3">
                     {playlistlinks[0].semster1.applied_maths.unit1.map((items) => {
                     return(
-                        <button onClick={() => {
+                        <div className="flex justify-center">
+                            <button onClick={() => {
                             navigate("/studylayout" + "?link=" + items.src)
-                        }} className="h-20 w-20 col-span-1">
-                            <div className="h-16 w-20 bg-orange-400"></div>
+                        }} className="h-[150px] w-[150px] col-span-1">
+                            <div className="h-4/5 w-full bg-orange-400"></div>
                             <div className="h-4 w-20 text-white">{items.title}</div>
                         </button>
+                        </div>
                     )
                     })}
                 </div>
