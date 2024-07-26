@@ -34,6 +34,7 @@ function Home(){
     
     return <div className="bg-black ">
         <Navbar />
+        <div className="overflow-x-hidden">
         <Sidemenubar />
         <Herosection />
         <Bentogrid />
@@ -43,6 +44,7 @@ function Home(){
         <FAQ />
         </Section1>
         <Footer></Footer>
+        </div>
         
     </div>
 }

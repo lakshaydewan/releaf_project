@@ -16,6 +16,7 @@ import { Studylyout } from './pages/main pages/studylayout';
 import { Profilepage } from './pages/main pages/profilepage';
 import { Studyresources } from './pages/main pages/studyresourcespage';
 import { Mycart } from './pages/main pages/mycart';
+import { Aboutsection } from './components/aboutsection';
 
 function App() {
   return (
@@ -30,7 +31,11 @@ function App() {
         <Route path="/studylayout" element={<Studylyout/>} />
         <Route path="/profilepage" element={<Profilepage/>} />
         <Route path="/studyresources" element={<Studyresources />} />
-        <Route path="/Mycart" element={<Mycart />} /> 
+        <Route path="/Mycart" element={<Mycart />} />
+        <Route path="/aboutus" element={<Aboutsection heading={"ABOUT US"} content={<p>this is the content Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ipsum illo libero perferendis dolores natus dicta nostrum deleniti eligendi eum repellat soluta voluptatum, dolorem, dolorum sapiente rem placeat fugiat sequi!</p>}/>} />
+        <Route path="/termsandconditions" element={<Aboutsection heading={"TERMS AND CONDITIONS"} content={<p>this is the content Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ipsum illo libero perferendis dolores natus dicta nostrum deleniti eligendi eum repellat soluta voluptatum, dolorem, dolorum sapiente rem placeat fugiat sequi!</p>}/>} /> 
+        <Route path="/contactus" element={<Aboutsection heading={"CONTACT US"} content={<p>this is the content Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ipsum illo libero perferendis dolores natus dicta nostrum deleniti eligendi eum repellat soluta voluptatum, dolorem, dolorum sapiente rem placeat fugiat sequi!</p>}/>} /> 
+        <Route path="/refundpolicy" element={<Aboutsection heading={"REFUND POLICY"} content={<p>this is the content Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ipsum illo libero perferendis dolores natus dicta nostrum deleniti eligendi eum repellat soluta voluptatum, dolorem, dolorum sapiente rem placeat fugiat sequi!</p>}/>} />  
 
       </Routes>
       </BrowserRouter>

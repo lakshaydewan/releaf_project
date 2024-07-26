@@ -6,8 +6,17 @@ import { Section1 } from "./sectionnew"
 const Productsection = () => {
 
     return(
-        <Section1 custompaddings="py-5" classname="pt-[12rem] -mt-[5.25rem] lg:mt-[3rem] mb-[5.25rem]">
-                <div className="lg:w-10/12 md:w-11/12 lg:min-w-[1000px] md:min-w-[700px] w-10/12 grid grid-cols-1 px-5 mx-auto lg:grid-cols-3 md:grid-cols-2 md:grid-rows-2">
+        <Section1 custompaddings="pb-0 lg:pb-0 xl:pb-0" classname="pt-[12rem] -mt-[5.25rem] lg:mt-[0rem] ">
+                <div className="relative z-[1] max-w-[62rem] mx-auto text-center mb-[6rem] md:mb-16 lg:mb-[8rem] ">
+                    <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-4xl xl:text-5xl  px-8   ">
+                        YOUR ONE STOP SOLOUTION FOR
+                        <span className="inline-block relative"  style={{
+                        background: 'linear-gradient(to right, #12c2e9, #c471ed, #f64f59)',
+                        WebkitBackgroundClip: 'text',
+                        color: 'transparent'}} >ASSINMENTS EG-SHEETS AND PRACTICAL FILES</span>
+                    </h1>
+                </div>
+                <div className="lg:w-10/12 md:w-11/12 lg:min-w-[1000px] md:min-w-[700px] w-10/12 grid grid-cols-1 px-5 mx-auto lg:grid-cols-3 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2">
                     <div className="w-4/12 h-60 flex items-center justify-center col-span-1  m-auto mb-[10rem]">
                     <PinContainer className="lg:w-[250px] md:w-[300px] h-80 w-[300px] flex justify-center  ">
                         <div className="h-full w-full bg-blue-500"></div>
@@ -23,6 +32,11 @@ const Productsection = () => {
                         <div className="h-full w-full bg-blue-500"></div>
                     </PinContainer>
                     </div>
+                </div>
+                <div className="absolute top-[10%] lg:top-[60%] left-[100%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full bg-blue-600 blur-[300px]"></div>
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-blue-600 blur-[300px]"></div>
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-blue-600 blur-[300px]"></div>
                 </div>
         </Section1>
     )

@@ -19,7 +19,7 @@ function Navbar(){
     const username = (user) ?
     (user.name.split("")[0]) : ("");
 
-    return <div className="sticky top-0 w-full z-10 bg-black barlow-condensed-bold">
+    return <div className="sticky top-0 w-full z-50 bg-black barlow-condensed-bold">
         <div className="flex justify-between h-0 items-center py-8">
         <div className="flex w-48 h-full text-white items-center justify-center lg:hidden">
             <div className="flex justify-start w-28">

@@ -1,9 +1,12 @@
 import React from 'react'
 import ButtonSmall from './ButtonSmall'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+
+    const navigate = useNavigate()
   return (
-    <div className='flex justify-between barlow-condensed-light border-t-[0.5px] text-white border-[#1a1919] pb-44 pt-28'>
+    <div className='flex justify-between barlow-condensed-light border-t-[0.5px] text-white border-[#1a1919] pb-44 pt-28 '>
         <div className='ml-8 sm:ml-16 xl:ml-24'>
             <div className='flex items-center gap-1.5'>
                <div className='w-6 h-6 bg-[lightblue] rounded-lg'>
@@ -30,10 +33,18 @@ const Footer = () => {
         </div>
         <div className='flex gap-6 mr-8 sm:mr-20 xl:mr-32'>   
             <div className='flex-row space-y-1.5'>
-                <ButtonSmall title={"terms and conditions"}></ButtonSmall>
-                <ButtonSmall title={"refund policy"}></ButtonSmall>
-                <ButtonSmall title={"contact us"}></ButtonSmall>
-                <ButtonSmall title={"about"}></ButtonSmall>
+                <ButtonSmall title={"terms and conditions"} onClick={() => {
+                    navigate("/termsandconditions")
+                }}></ButtonSmall>
+                <ButtonSmall title={"refund policy"} onClick={() => {
+                    navigate("/refundpolicy")
+                }}></ButtonSmall>
+                <ButtonSmall title={"contact us"} onClick={() => {
+                    navigate("/contactus")
+                }}></ButtonSmall>
+                <ButtonSmall title={"about"} onClick={() => {
+                    navigate("/aboutus")
+                }}></ButtonSmall>
             </div>
             <div className='flex-row space-y-1.5'>
                 <ButtonSmall title={"twitter"} />

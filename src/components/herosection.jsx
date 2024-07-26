@@ -25,7 +25,7 @@ const Herosection = () => {
                     </p>
                     <Loginbutton content={"get started"}/>
                 </div>
-                <div className="relative max-w-[23rem] mx-auto md:max-w-3xl lg:max-w-5xl xl:mb-24 mt-72">
+                <div className="relative max-w-[23rem] mx-auto md:max-w-3xl lg:max-w-5xl xl:mb-24 mt-20">
                     <div className="relative z-[1] p-0.5 rounded-2xl bg-coinic-gradient">
                         <motion.div 
                         initial={{y: 50, opacity: 0.3}}
