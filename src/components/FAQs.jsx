@@ -23,7 +23,7 @@ function FAQ(){
         duration : 0.5,
         delay : 0.3
     }} className="w-full flex items-center justify-center">
-        <div id="content div" className="w-10/12 p-8 border rounded-3xl border-none space-y-4
+        <div id="content div" className="w-9/12 md:w-8/12 p-8 border rounded-3xl border-none space-y-4
                                         lg:flex lg:space-x-4 lg:h-auto" style={{
             backgroundColor : "transparent",
             backgroundImage: "linear-gradient(120deg ,rgba(112,128,144,0.3),rgba(44, 62, 80 ,0.3)" }}>
@@ -31,9 +31,9 @@ function FAQ(){
                                             lg:2/5" >
                 <div id="upper-section" className="space-y-1">
                     <div className=" px-3 text-sm h-fit tracking-widest text-white font-semibold w-fit flex py-1.5 border rounded-full">FAQ</div>
-                    <div className="text-white font-bold text-5xl w-fit
-                                    md:text-6xl 
-                                    lg:text-6xl">FREQUENTLY <br /> ASKED <br />QUESTION</div>
+                    <div className="text-white font-bold text-3xl w-fit
+                                    md:text-3xl 
+                                    lg:text-4xl">FREQUENTLY <br /> ASKED <br />QUESTION</div>
                 </div>
                
             </div>

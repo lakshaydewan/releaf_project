@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { Imgaecompnent } from "./imagecomponent";
 
 export const PinContainer = ({
-  children = <Imgaecompnent />,
+  children,
   title= "hello world",
   href,
   className,

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import Section from "./section"
 import { Section1 } from "./sectionnew"
 
@@ -22,16 +23,88 @@ const Bentogrid = () => {
                     <div className="row-start-6 row-end-10 md:row-start-1 md:row-end-4 md:col-start-4 md:col-end-6 bg-red-500 border-none rounded-3xl">sfds</div>
                     <div className="row-start-10 row-end-12 md:row-start-4 md:row-end-6 md:col-start-4 md:col-end-6 bg-green-500 border-none rounded-3xl">sdfsd</div>
                 </div>
+                {/* motion gradients  */}
                 <div className="absolute top-[10%] lg:top-[75%] -left-[40%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
+                     <motion.div 
+                     animate={{
+                        backgroundColor: ["#FF0000", "#0000FF", "#00FF00", "#FFFF00", "#FF0000"],
+                        width: ["400px", "500px", "600px", "700px", "400px"],
+                        height: ["550px", "450px", "350px", "250px", "550px"]
+                      }}
+                      transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full  blur-[300px]"></motion.div>
+                      <motion.div 
+                     animate={{
+                        backgroundColor: ["#0000FF", "#00FF00","#FF0000", "#FFFF00", "#FF0000"],
+                        width: ["400px", "500px", "600px", "700px", "400px"],
+                        height: ["250px", "450px", "150px", "250px", "350px"]
+                      }}
+                      transition={{
+                        duration: 16,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full  blur-[300px]"></motion.div>
+                      <motion.div 
+                     animate={{
+                        backgroundColor: ["#00FF00", "#FFFF00", "#FF0000", "#0000FF", "#00FF00"],
+                        width: ["400px", "500px", "600px", "700px", "400px"],
+                        height: [ "350px", "250px", "550px", "450px","350px"]
+                      }}
+                      transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full  blur-[300px]"></motion.div>
+                </div>
+                <div className="absolute top-[10%] lg:top-[25%] -right-[140%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center ">
+                     <motion.div 
+                     animate={{
+                        backgroundColor: ["#FF0000", "#0000FF", "#00FF00", "#FFFF00", "#FF0000"],
+                        width: ["400px", "500px", "600px", "700px", "400px"],
+                        height: ["550px", "450px", "350px", "250px", "550px"]
+                      }}
+                      transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full  blur-[300px]"></motion.div>
+                      <motion.div 
+                     animate={{
+                        backgroundColor: ["#0000FF", "#00FF00","#FF0000", "#FFFF00", "#FF0000"],
+                        width: ["400px", "500px", "600px", "700px", "400px"],
+                        height: ["250px", "450px", "150px", "250px", "350px"]
+                      }}
+                      transition={{
+                        duration: 16,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full  blur-[300px]"></motion.div>
+                      <motion.div 
+                     animate={{
+                        backgroundColor: ["#00FF00", "#FFFF00", "#FF0000", "#0000FF", "#00FF00"],
+                        width: ["400px", "500px", "600px", "700px", "400px"],
+                        height: [ "350px", "250px", "550px", "450px","350px"]
+                      }}
+                      transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full  blur-[300px]"></motion.div>
+                </div>
+                {/* static gradients */}
+                {/* <div className="absolute top-[10%] lg:top-[75%] -left-[40%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
                      <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
                      <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
                      <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
-                </div>
-                <div className="absolute top-[10%] lg:top-[25%] -right-[140%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center ">
+                </div> */}
+                {/* <div className="absolute top-[10%] lg:top-[25%] -right-[140%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center ">
                      <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full bg-pink-400 blur-[300px]"></div>
                      <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-pink-400 blur-[300px]"></div>
                      <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-pink-400 blur-[300px]"></div>
-                </div>
+                </div> */}
             </div>
         </Section1>
     )
