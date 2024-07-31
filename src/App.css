@@ -7,3 +7,4 @@ html, body, #root {
 .gradientClass {
   background-image: radial-gradient(circle to left, red, blue);
 }
+

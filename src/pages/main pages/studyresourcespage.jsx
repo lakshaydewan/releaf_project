@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Sidemenubar } from "../../components/sidemenubar";
 import { useLocation, useNavigate} from "react-router-dom"
 import { playlistlinks } from "../../assets/links/links";
+import { pdflinks } from "../../components/links";
 
 
 
@@ -18,6 +19,19 @@ function Studyresources(){
     const selectedsemester = queryParams.get('semester') || '';
     const selectedbranch = queryParams.get('branch') || '';
     const selcetedsubject =  queryParams.get('subject') || '';
+    const section = queryParams.get('section') || 'default';
+    
+    
+    const components = {
+        Playlist: PLAYLIST,
+        Lab: LAB,
+        Pdf: PDF,
+        default : () => {
+            return <div></div>
+        }
+      };
+
+    const Selectedsection = components[section]
 
     //this commented area is also previously used
 
@@ -27,7 +41,7 @@ function Studyresources(){
     // const [visible,setvisible] = useState(false)
 
     const listofsubjects = [
-        { id:1 ,semester:'1st', branch:'IT',  value:['APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
+        { id:1 ,semester:'1st', branch:'IT',  value:['APPLIED MATHS', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2',"MANUFACTURING PROCESS"]},
         { id:1 ,semester:'2nd', branch:'IT',  value:['APPLIED PHYSICS I2', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
         { id:1 ,semester:'3rd', branch:'IT',  value:['APPLIED PHYSICS I3', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
         { id:1 ,semester:'4th', branch:'IT',  value:['APPLIED PHYSICS I4', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
@@ -89,6 +103,7 @@ function Studyresources(){
                                 lg:text-base" onClick={() => {
                                     // setvisible(true)
                                     queryParams.set('subject', values);
+                                    queryParams.set('section', "Playlist")
                                     navigate({ search: queryParams.toString() });
                                 }
                                 }>{values}</button>
@@ -104,15 +119,127 @@ function Studyresources(){
         <div className={`${(selcetedsubject) ? 'block' : 'hidden'} w-full flex justify-center`}>
             <div className="border border-white rounded-lg w-[350px] h-80 overflow-hidden overflow-y-scroll flex flex-col items-center lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]">
                 <div className="text-white font-bold text-4xl w-full px-5 py-5">{selcetedsubject}</div>
-                <div id="buttons" className="w-11/12 grid grid-cols-4 h-fit lg:h-10  bg-gray-500 border border-none rounded-md">
-                    <div className="w-full flex justify-center"><button className="text-white">THEORY</button></div>
-                    <div className="w-full flex justify-center"><button className="text-white">LAB</button></div>
-                    <div className="w-full flex justify-center"><button className="text-white">Pdfs</button></div>
+                <div id="buttons" className="w-11/12 grid grid-cols-4 h-fit pt-2 pb-2 lg:h-10  bg-gray-500 border border-none rounded-md">
+                    <div className="w-full flex justify-center "><button className="text-white hover:bg-gray-900">THEORY</button></div>
                     <div onClick={() => {
-                        
-                    }} className="w-full flex justify-center"><button className="text-white">PLAYLIST</button></div>
+                        const newsection ="Lab";
+                        queryParams.set('section', newsection);
+                        navigate({ search: queryParams.toString() });
+                    }} className="w-full flex justify-center"><button className="text-white  hover:bg-gray-900">LAB</button></div>
+                    <div onClick={() => {
+                        const newsection ="Pdf";
+                        queryParams.set('section', newsection);
+                        navigate({ search: queryParams.toString() });
+                    }} className="w-full flex justify-center"><button className="text-white  hover:bg-gray-900">Pdfs</button></div>
+                    <div onClick={() => {
+                        const newsection ="Playlist";
+                        queryParams.set('section', newsection);
+                        navigate({ search: queryParams.toString() });
+                    }} className="w-full flex justify-center"><button className="text-white  hover:bg-gray-900">PLAYLIST</button></div>
                     </div>
-                <div className=" w-10/12  grid grid-cols-4 gap-4 pt-3">
+                <div className=" w-10/12  pt-3">
+                    <Selectedsection subject={selcetedsubject} semester={selectedsemester}/>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+}
+
+function PLAYLIST(props){
+
+    const navigate = useNavigate()
+    const semester = props.semester
+    const subject = props.subject
+    console.log("semester for video playlist",semester)
+    console.log("subject for video playlist,video",subject)
+    console.log(playlistlinks[semester][subject],"hello")
+
+
+    return(
+        <div>
+            <div className="text-white">
+                <div>unit1</div>
+                        {playlistlinks?.[semester]?.[subject]?.["unit1"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 gap-4 ">
+                            {playlistlinks[semester][subject].unit1.map((items) => {
+                        return(
+                            <div className="flex justify-center">
+                                <button onClick={() => {
+                                navigate("/studylayout" + "?link=" + items.src)
+                            }} className="sm:h-[150px] sm:w-[150px] w-[100px] h-[100px] col-span-1">
+                                <div className="h-4/5 w-full bg-orange-400"></div>
+                                <div className="h-4 w-20 text-white">{items.title}</div>
+                            </button>
+                            </div>
+                        )
+                        })}
+                        </div> : <div></div>}
+            </div>
+            <div className="text-white">
+                <div>unit2</div>
+                        {playlistlinks?.[semester]?.[subject]?.["unit2"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 gap-4 ">
+                            {playlistlinks[semester][subject].unit1.map((items) => {
+                        return(
+                            <div className="flex justify-center">
+                                <button onClick={() => {
+                                navigate("/studylayout" + "?link=" + items.src)
+                            }} className="sm:h-[150px] sm:w-[150px] w-[100px] h-[100px] col-span-1">
+                                <div className="h-4/5 w-full bg-orange-400"></div>
+                                <div className="h-4 w-20 text-white">{items.title}</div>
+                            </button>
+                            </div>
+                        )
+                        })}
+                        </div> : <div></div>}
+            </div>
+            <div className="text-white">
+                <div>unit3</div>
+                        {playlistlinks?.[semester]?.[subject]?.["unit3"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 gap-4 ">
+                            {playlistlinks[semester][subject].unit1.map((items) => {
+                        return(
+                            <div className="flex justify-center">
+                                <button onClick={() => {
+                                navigate("/studylayout" + "?link=" + items.src)
+                            }} className="sm:h-[150px] sm:w-[150px] w-[100px] h-[100px] col-span-1">
+                                <div className="h-4/5 w-full bg-orange-400"></div>
+                                <div className="h-4 w-20 text-white">{items.title}</div>
+                            </button>
+                            </div>
+                        )
+                        })}
+                        </div> : <div></div>}
+            </div>
+            <div className="text-white">
+                <div>unit4</div>
+                        {playlistlinks?.[semester]?.[subject]?.["unit4"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 gap-4 ">
+                            {playlistlinks[semester][subject].unit1.map((items) => {
+                        return(
+                            <div className="flex justify-center">
+                                <button onClick={() => {
+                                navigate("/studylayout" + "?link=" + items.src)
+                            }} className="sm:h-[150px] sm:w-[150px] w-[100px] h-[100px] col-span-1">
+                                <div className="h-4/5 w-full bg-orange-400"></div>
+                                <div className="h-4 w-20 text-white">{items.title}</div>
+                            </button>
+                            </div>
+                        )
+                        })}
+                        </div> : <div></div>}
+            </div>
+            
+        </div>
+    )
+}
+
+function LAB(){
+
+    const lablinks = []
+
+
+    return(
+        <div className="w-full text-white">
+            {(lablinks.length > 0) ? <div className=" w-full grid md:grid-cols-4 grid-cols-3 gap-4 ">
                     {playlistlinks[0].semster1.applied_maths.unit1.map((items) => {
                     return(
                         <div className="flex justify-center">
@@ -125,12 +252,54 @@ function Studyresources(){
                         </div>
                     )
                     })}
-                </div>
-            </div>
+                </div> : <div className="w-full pt-6 text-4xl font-bold flex justify-center ">
+                    coming soon...
+                    </div>}
         </div>
-        
-    </div>
+    )
+}
+
+function PDF(props){
+    const navigate = useNavigate()
+    const queryParams = new URLSearchParams(location.search);
+    const selcetedsubject =  queryParams.get('subject') || '';
+    const subject = pdflinks.find(pdf => pdf.subject === selcetedsubject);
+    const links = subject ? subject.links : [];
+
+
+    return(
+        <div className=" w-full grid md:grid-cols-4 grid-cols-3 gap-4 text-white">
+                    {links.length > 0 ? (links.map((items) => {
+                    return(
+                        <div key={items.id} className="flex justify-center">
+                            <button onClick={() => {
+                            navigate("/studylayout" + "?pdflink=" + (items.title))
+                        }} className="h-[150px] w-[150px] col-span-1">
+                            <div className="h-4/5 w-full bg-orange-400"></div>
+                            <div className="h-4 w-20 text-white">{items.title}</div>
+                        </button>
+                        </div>
+                    )
+                    })) : (<div className="w-full pt-6 text-4xl font-bold flex justify-center col-span-4">
+                        coming soon....
+                    </div>)}
+                    
+                </div>
+    )
+}
+
+function Theory(){
+
+
+    return <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 }
+
+
+  
 
 export {Studyresources}

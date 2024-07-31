@@ -24,6 +24,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
+          'shimmer': 'linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)',
         'custom-radial': 'radial-gradient(circle, #1a2a6c, #0a0a0a 70%)',
       },
       width: {
@@ -36,8 +37,13 @@ export default {
       },
       animation: {
         shimmer: "shimmer 2s linear infinite",
+        shimmer2: 'shimmer2 2s infinite',
       },
       keyframes: {
+        shimmer2: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
         shimmer: {
           from: {
             backgroundPosition: "0 0",

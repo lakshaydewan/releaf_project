@@ -27,7 +27,7 @@ function Dropdown(props){
             setvisible(!visible)
         }}>{props.content2? props.content2 : props.content }</button>
 
-        <div className={`${visible ? 'block' : 'hidden'} absolute border border-white rounded-md w-28 h-fit p-3 lg:w-60 md:w-60 sm:w-40`} style={{
+        <div className={`${visible ? 'block' : 'hidden'} absolute border z-[1] border-white rounded-md w-28 h-fit p-3 lg:w-60 md:w-60 sm:w-40`} style={{
             backgroundImage: "linear-gradient(120deg ,rgba(112,128,144,1),rgba(44, 62, 80 ,1)" }}>
             {props.items.map(item => {
                 return <div key={item} className="h-8 flex items-center justify-center bg-transparent border border-none rounded-md text-white  cursor-pointer hover:bg-gray-500" onClick={() => {
