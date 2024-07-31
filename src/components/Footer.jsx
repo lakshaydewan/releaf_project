@@ -6,7 +6,7 @@ const Footer = () => {
 
     const navigate = useNavigate()
   return (
-    <div className='flex justify-between barlow-condensed-light border-t-[0.5px] text-white border-[#1a1919] pb-44 pt-28 '>
+    <div className='flex justify-between barlow-condensed-light border-t-[0.5px] text-white border-[#1a1919] pb-44 pt-28 mt:10 md:mt-20 lg:mt-36'>
         <div className='ml-8 sm:ml-16 xl:ml-24'>
             <div className='flex items-center gap-1.5'>
                <div className='w-6 h-6 bg-[lightblue] rounded-lg'>

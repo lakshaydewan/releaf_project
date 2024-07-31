@@ -10,9 +10,9 @@ const Imageslider = () => {
 
 
     return(
-        <Section1  classname="pt-0 mt-[0rem]"
+        <Section1  classname="pt-0 mt-[0rem] lg:mb-36 md:20 mb-10"
         id="image slider">
-            <div className="flex  mb-12 overflow-hidden " id="container">
+            <div className="flex mb-12 overflow-hidden " id="container">
                 <div id="slider" ref={sliderRef} className="pl-[50%] pr-[50%] relative flex overflow-hidden snap-x snap-mandatory space-x-20">
                     <div ref={slidesref} className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500 sm:aspect-[1024/490] aspect-[4/3] ">sds</div>
                     <div className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500  sm:aspect-[1024/490] aspect-[4/3]">sfs</div>

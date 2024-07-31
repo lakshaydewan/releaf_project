@@ -112,5 +112,22 @@
     font-style: italic;
   }
   
-
-
+  .custom-container {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .custom-container {
+      max-width: 80vw;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .custom-container {
+      max-width: 75vw;
+    }
+  }

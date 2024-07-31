@@ -6,7 +6,7 @@ import { Section1 } from "./sectionnew"
 const Productsection = () => {
 
     return(
-        <Section1 custompaddings="pb-0 lg:pb-0 xl:pb-0" classname="pt-[12rem] -mt-[5.25rem] lg:mt-[0rem] ">
+        <Section1 custompaddings="pb-0 lg:pb-0 xl:pb-0" classname="pt-[12rem] -mt-[5.25rem] lg:mt-[0rem] mb-72 ">
                 <div className="relative z-[1] max-w-[62rem] mx-auto text-center mb-[6rem] md:mb-16 lg:mb-[8rem] ">
                     <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-4xl xl:text-5xl  px-8   ">
                         YOUR ONE STOP SOLOUTION FOR

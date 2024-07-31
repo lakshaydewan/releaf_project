@@ -1,112 +1,67 @@
-import { motion } from "framer-motion"
 import Section from "./section"
 import { Section1 } from "./sectionnew"
+import TypeWriter from "./TypeWriter"
 
 
 
 const Bentogrid = () => {
 
     return(
-        <Section1 custompaddings="py-5" classname="pt-[12rem] -mt-[5.25rem] " id="bent grid ">
-            <div className="w-full flex flex-col  items-center">
-            <div className="relative z-[1] max-w-[62rem] mx-auto text-center mb-[3rem] md:mb-16 lg:mb-[4rem] ">
-                    <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-4xl xl:text-5xl  px-8   ">
-                        YOUR ONE STOP SOLOUTION FOR
-                        <span className="inline-block relative"  style={{
-          background: 'linear-gradient(to right, #12c2e9, #c471ed, #f64f59)',
-          WebkitBackgroundClip: 'text',
-          color: 'transparent'}} > STUDY MATERIAL</span>
-                    </h1>
+<Section1 custompaddings="py-5" classname="pt-[12rem] mt-32 mb-72" id="bent grid">
+    <div className="w-full flex flex-col  items-center">
+        <div className="relative z-[1] max-w-[62rem] mx-auto text-center mb-[3rem] md:mb-16 lg:mb-[4rem] ">
+            <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-4xl xl:text-6xl px-8 barlow-condensed-semibold mb-3">
+                What we offer
+            </h1>
+                <TypeWriter></TypeWriter>
+            </div>                        
+        <div className="custom-container mx-auto p-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 text-white w-full h-auto">
+                <div className="group lg:row-span-2 border border-gray-100 rounded-[40px] p-4 flex flex-col items-left">
+                <h1 className="group-hover:translate-x-2 text-2xl lg:text-3xl mt-4 lg:mt-6 transition duration-150 ease-linear">lorem ipsum</h1>
+                <div className="my-4 lg:my-12 rounded-2xl overflow-hidden w-full group-hover:rotate-3 transition duration-150 ease-linear">
+                    <img src="https://picsum.photos/300/300" alt="" className="w-full" />
                 </div>
-                <div className="w-8/12 aspect-[512/1600] sm:aspect-[512/1024] md:aspect-[1024/600] gap-4 grid grid-cols-1 grid-rows-12 md:grid-cols-5 md:grid-rows-5  ">
-                    <div className="row-start-1 row-end-6 md:col-start-1 md:col-end-4 bg-blue-500 border border-none rounded-3xl">czcz</div>
-                    <div className="row-start-6 row-end-10 md:row-start-1 md:row-end-4 md:col-start-4 md:col-end-6 bg-red-500 border-none rounded-3xl">sfds</div>
-                    <div className="row-start-10 row-end-12 md:row-start-4 md:row-end-6 md:col-start-4 md:col-end-6 bg-green-500 border-none rounded-3xl">sdfsd</div>
-                </div>
-                {/* motion gradients  */}
-                <div className="absolute top-[10%] lg:top-[75%] -left-[40%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
-                     <motion.div 
-                     animate={{
-                        backgroundColor: ["#FF0000", "#0000FF", "#00FF00", "#FFFF00", "#FF0000"],
-                        width: ["400px", "500px", "600px", "700px", "400px"],
-                        height: ["550px", "450px", "350px", "250px", "550px"]
-                      }}
-                      transition={{
-                        duration: 8,
-                        repeat: Infinity,
-                        ease: "linear"
-                      }}className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full  blur-[300px]"></motion.div>
-                      <motion.div 
-                     animate={{
-                        backgroundColor: ["#0000FF", "#00FF00","#FF0000", "#FFFF00", "#FF0000"],
-                        width: ["400px", "500px", "600px", "700px", "400px"],
-                        height: ["250px", "450px", "150px", "250px", "350px"]
-                      }}
-                      transition={{
-                        duration: 16,
-                        repeat: Infinity,
-                        ease: "linear"
-                      }}className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full  blur-[300px]"></motion.div>
-                      <motion.div 
-                     animate={{
-                        backgroundColor: ["#00FF00", "#FFFF00", "#FF0000", "#0000FF", "#00FF00"],
-                        width: ["400px", "500px", "600px", "700px", "400px"],
-                        height: [ "350px", "250px", "550px", "450px","350px"]
-                      }}
-                      transition={{
-                        duration: 8,
-                        repeat: Infinity,
-                        ease: "linear"
-                      }}className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full  blur-[300px]"></motion.div>
-                </div>
-                <div className="absolute top-[10%] lg:top-[25%] -right-[140%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center ">
-                     <motion.div 
-                     animate={{
-                        backgroundColor: ["#FF0000", "#0000FF", "#00FF00", "#FFFF00", "#FF0000"],
-                        width: ["400px", "500px", "600px", "700px", "400px"],
-                        height: ["550px", "450px", "350px", "250px", "550px"]
-                      }}
-                      transition={{
-                        duration: 8,
-                        repeat: Infinity,
-                        ease: "linear"
-                      }}className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full  blur-[300px]"></motion.div>
-                      <motion.div 
-                     animate={{
-                        backgroundColor: ["#0000FF", "#00FF00","#FF0000", "#FFFF00", "#FF0000"],
-                        width: ["400px", "500px", "600px", "700px", "400px"],
-                        height: ["250px", "450px", "150px", "250px", "350px"]
-                      }}
-                      transition={{
-                        duration: 16,
-                        repeat: Infinity,
-                        ease: "linear"
-                      }}className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full  blur-[300px]"></motion.div>
-                      <motion.div 
-                     animate={{
-                        backgroundColor: ["#00FF00", "#FFFF00", "#FF0000", "#0000FF", "#00FF00"],
-                        width: ["400px", "500px", "600px", "700px", "400px"],
-                        height: [ "350px", "250px", "550px", "450px","350px"]
-                      }}
-                      transition={{
-                        duration: 8,
-                        repeat: Infinity,
-                        ease: "linear"
-                      }}className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full  blur-[300px]"></motion.div>
-                </div>
-                {/* static gradients */}
-                {/* <div className="absolute top-[10%] lg:top-[75%] -left-[40%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
-                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
-                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
-                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
-                </div> */}
-                {/* <div className="absolute top-[10%] lg:top-[25%] -right-[140%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center ">
-                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full bg-pink-400 blur-[300px]"></div>
-                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-pink-400 blur-[300px]"></div>
-                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-pink-400 blur-[300px]"></div>
-                </div> */}
+                <p className="mt-4 lg:mt-20 text-left group-hover:translate-x-2 transition duration-150 ease-linear">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                </p>
             </div>
-        </Section1>
+                <div className="group lg:col-span-2 border border-gray-100 rounded-[40px] p-4 flex flex-col lg:flex-row items-center">
+                <div className="flex flex-col mt-4 lg:mt-32 lg:ml-3 w-full lg:w-1/2 group-hover:translate-x-2 transition duration-150 ease-linear">
+                    <h1 className="text-2xl lg:text-3xl mb-4 lg:mb-5">lorem ipsum</h1>
+                    <p className="mb-4 lg:mb-3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+                    voluptatem
+                    </p>
+                </div>
+                <div className="overflow-hidden rounded-2xl mt-4 lg:mt-0 lg:ml-3 w-full lg:w-1/2 group-hover:-rotate-3 transition duration-150 ease-linear">
+                    <img src="https://picsum.photos/700/500" alt="" className="w-full" />
+                </div>
+                </div>
+                <div className="group lg:col-span-1 border border-gray-100 rounded-[40px] p-4 flex flex-col items-center">
+                <div className="rounded-2xl overflow-hidden w-full group-hover:rotate-3 transition duration-150 ease-linear">
+                    <img src="https://picsum.photos/300/130" alt="" className="w-full" />
+                </div>
+                <div className="mt-4 text-left group-hover:translate-x-2 transition duration-150 ease-linear">
+                    <h1 className="text-2xl lg:text-3xl mb-4 ">lorem ipsum</h1>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing reprehenderit nisi.
+                    </p>
+                </div>
+                </div>
+                <div className="group lg:col-span-1 border border-gray-100 rounded-[40px] p-4 flex flex-col items-center">
+                <div className="mt-2 text-left group-hover:translate-x-2 transition duration-150 ease-linear">
+                    <h1 className="text-2xl lg:text-3xl mb-4">lorem ipsum</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div className="overflow-hidden rounded-2xl mt-4 lg:mt-3 w-full group-hover:rotate-3 transition duration-150 ease-linear">
+                    <img src="https://picsum.photos/300/130" alt="" className="w-full" />
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Section1>
     )
 }
 

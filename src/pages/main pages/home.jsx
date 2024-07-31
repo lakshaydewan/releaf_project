@@ -14,6 +14,7 @@ import { Section1 } from "../../components/sectionnew";
 import { Imageslider } from "../../components/imageslider";
 import { Productsection } from "../../components/productsecction";
 import Footer from "../../components/Footer";
+import GetInTouch from "../../components/GetInTouch";
 
 //#755ae2
 function Home(){
@@ -38,9 +39,20 @@ function Home(){
         <Sidemenubar />
         <Herosection />
         <Bentogrid />
+        <div className="flex justify-center">
+            <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-4xl xl:text-5xl px-8 barlow-condensed-semibold mb-0">
+                Some of Our Products
+            </h1>
+        </div>
         <Productsection />
         <Imageslider />
         <Section1 custompaddings="py-10" classname="pt-0 mt-[4rem]" id="faq ">
+        <div className="flex justify-center">
+            <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-4xl xl:text-5xl px-8 barlow-condensed-semibold mb-20">
+                Get In Touch
+            </h1>
+        </div>
+        <GetInTouch />
         <FAQ />
         </Section1>
         <Footer></Footer>

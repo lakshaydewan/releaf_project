@@ -23,8 +23,8 @@ function FAQ(){
         duration : 0.5,
         delay : 0.3
     }} className="w-full flex items-center justify-center">
-        <div id="content div" className="w-9/12 md:w-8/12 p-8 border rounded-3xl border-none space-y-4
-                                        lg:flex lg:space-x-4 lg:h-auto" style={{
+        <div id="content div" className="w-9/12 md:w-9/12 p-8 border rounded-3xl border-none space-y-4
+                                        lg:flex lg:space-x-4 lg:h-auto ml-14" style={{
             backgroundColor : "transparent",
             backgroundImage: "linear-gradient(120deg ,rgba(112,128,144,0.3),rgba(44, 62, 80 ,0.3)" }}>
             <div id="left-section" className="space-y-10 w-2/5
