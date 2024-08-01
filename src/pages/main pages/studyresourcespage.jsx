@@ -163,17 +163,22 @@ function PLAYLIST(props){
 
 
     return(
-        <div className="my-4">
+        <div className="my-4 space-y-4">
             <div className="text-white">
-                <div className="px-4 mb-4 cursor-default ">UNIT 1</div>
-                        {playlistlinks?.[semester]?.[subject]?.["unit1"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 gap-4 ">
+                <div className=" sm:mb-4 cursor-default md:text-3xl sm:text-2xl text-xl mb-2 font-bold ">UNIT 1</div>
+                        {playlistlinks?.[semester]?.[subject]?.["unit1"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 sm:gap-4 gap-2 ">
                             {playlistlinks[semester][subject].unit1.map((items) => {
                         return(
                             <div className="flex justify-center">
                                 <button onClick={() => {
                                 navigate("/studylayout" + "?link=" + items.src)
-                            }} className="sm:h-[150px] sm:w-[150px] w-[100px] h-[100px] col-span-1">
-                                <div className="h-4/5 w-full bg-orange-400"></div>
+                            }} className="md:h-[100px] md:w-[150px] w-[100px] h-[80px] col-span-1">
+                                <div className=" w-full aspect-[16/9] border border-white rounded-xl bg-black flex justify-center items-center hover:bg-blue-500 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 sm:size-12 md:size:16">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
+                                </svg>
+
+                                </div>
                                 <div className="h-4 w-full text-center text-white">{items.title}</div>
                             </button>
                             </div>
@@ -182,16 +187,21 @@ function PLAYLIST(props){
                         </div> : <div></div>}
             </div>
             <div className="text-white">
-                <div>unit2</div>
-                        {playlistlinks?.[semester]?.[subject]?.["unit2"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 gap-4 ">
-                            {playlistlinks[semester][subject].unit1.map((items) => {
+                <div className=" sm:mb-4 cursor-default md:text-3xl sm:text-2xl text-xl mb-2 font-bold ">UNIT 2</div>
+                        {playlistlinks?.[semester]?.[subject]?.["unit2"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 sm:gap-4 gap-2 ">
+                            {playlistlinks[semester][subject].unit2.map((items) => {
                         return(
                             <div className="flex justify-center">
                                 <button onClick={() => {
                                 navigate("/studylayout" + "?link=" + items.src)
-                            }} className="sm:h-[150px] sm:w-[150px] w-[100px] h-[100px] col-span-1">
-                                <div className="h-4/5 w-full bg-orange-400"></div>
-                                <div className="h-4 w-20 text-white">{items.title}</div>
+                            }} className="md:h-[100px] md:w-[150px] w-[100px] h-[80px] col-span-1">
+                                <div className=" w-full aspect-[16/9] border border-white rounded-xl bg-black flex justify-center items-center hover:bg-blue-500 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 sm:size-12 md:size:16">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
+                                </svg>
+
+                                </div>
+                                <div className="h-4 w-full text-center text-white">{items.title}</div>
                             </button>
                             </div>
                         )
@@ -199,16 +209,21 @@ function PLAYLIST(props){
                         </div> : <div></div>}
             </div>
             <div className="text-white">
-                <div>unit3</div>
-                        {playlistlinks?.[semester]?.[subject]?.["unit3"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 gap-4 ">
-                            {playlistlinks[semester][subject].unit1.map((items) => {
+                <div className=" sm:mb-4 cursor-default md:text-3xl sm:text-2xl text-xl mb-2 font-bold ">UNIT 3</div>
+                        {playlistlinks?.[semester]?.[subject]?.["unit3"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 sm:gap-4 gap-2 ">
+                            {playlistlinks[semester][subject].unit3.map((items) => {
                         return(
                             <div className="flex justify-center">
                                 <button onClick={() => {
                                 navigate("/studylayout" + "?link=" + items.src)
-                            }} className="sm:h-[150px] sm:w-[150px] w-[100px] h-[100px] col-span-1">
-                                <div className="h-4/5 w-full bg-orange-400"></div>
-                                <div className="h-4 w-20 text-white">{items.title}</div>
+                            }} className="md:h-[100px] md:w-[150px] w-[100px] h-[80px] col-span-1">
+                                <div className=" w-full aspect-[16/9] border border-white rounded-xl bg-black flex justify-center items-center hover:bg-blue-500 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 sm:size-12 md:size:16">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
+                                </svg>
+
+                                </div>
+                                <div className="h-4 w-full text-center text-white">{items.title}</div>
                             </button>
                             </div>
                         )
@@ -216,16 +231,21 @@ function PLAYLIST(props){
                         </div> : <div></div>}
             </div>
             <div className="text-white">
-                <div>unit4</div>
-                        {playlistlinks?.[semester]?.[subject]?.["unit4"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 gap-4 ">
-                            {playlistlinks[semester][subject].unit1.map((items) => {
+                <div className=" sm:mb-4 cursor-default md:text-3xl sm:text-2xl text-xl mb-2 font-bold ">UNIT 4</div>
+                        {playlistlinks?.[semester]?.[subject]?.["unit4"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 sm:gap-4 gap-2 ">
+                            {playlistlinks[semester][subject].unit4.map((items) => {
                         return(
                             <div className="flex justify-center">
                                 <button onClick={() => {
                                 navigate("/studylayout" + "?link=" + items.src)
-                            }} className="sm:h-[150px] sm:w-[150px] w-[100px] h-[100px] col-span-1">
-                                <div className="h-4/5 w-full bg-orange-400"></div>
-                                <div className="h-4 w-20 text-white">{items.title}</div>
+                            }} className="md:h-[100px] md:w-[150px] w-[100px] h-[80px] col-span-1">
+                                <div className=" w-full aspect-[16/9] border border-white rounded-xl bg-black flex justify-center items-center hover:bg-blue-500 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 sm:size-12 md:size:16">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
+                                </svg>
+
+                                </div>
+                                <div className="h-4 w-full text-center text-white">{items.title}</div>
                             </button>
                             </div>
                         )
