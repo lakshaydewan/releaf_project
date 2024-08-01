@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Sidemenubar } from "../../components/sidemenubar";
 import { useLocation, useNavigate} from "react-router-dom"
 import { playlistlinks } from "../../assets/links/links";
-import { pdflinks } from "../../components/links";
+import { pdflinks, Theorycontent } from "../../components/links";
 
 
 
@@ -26,6 +26,7 @@ function Studyresources(){
         Playlist: PLAYLIST,
         Lab: LAB,
         Pdf: PDF,
+        Theory : THEORY,
         default : () => {
             return <div></div>
         }
@@ -41,7 +42,7 @@ function Studyresources(){
     // const [visible,setvisible] = useState(false)
 
     const listofsubjects = [
-        { id:1 ,semester:'1st', branch:'IT',  value:['APPLIED MATHS', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2',"MANUFACTURING PROCESS"]},
+        { id:1 ,semester:'1st', branch:'IT',  value:['APPLIED MATHS', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2',"MANUFACTURING PROCESS"]},
         { id:1 ,semester:'2nd', branch:'IT',  value:['APPLIED PHYSICS I2', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
         { id:1 ,semester:'3rd', branch:'IT',  value:['APPLIED PHYSICS I3', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
         { id:1 ,semester:'4th', branch:'IT',  value:['APPLIED PHYSICS I4', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
@@ -88,12 +89,12 @@ function Studyresources(){
             <div id="subjects">
                 {listofsubjects.map(subject => {
                     if (subject.semester == selectedsemester && subject.branch == selectedbranch ){
-                        return <div className="grid grid-cols-2 gap-6 px-5
+                        return <div className="grid grid-cols-2 gap-6 px-5 pb-3
                         sm:grid sm:grid-cols-2 sm:px-10
                         md:grid-cols-3 md:px-10
                         lg:grid-cols-3 lg:px-10">
                             {subject.value.map(values => {
-                            return <div className="bg-white max-w-40 max-h-10 min-w-32 h-8 flex items-center border border-none rounded-md
+                            return <div className="bg-white max-w-40 max-h-10 min-w-32  h-8 flex items-center border border-none rounded-md
                             lg:max-w-60 lg:max-h-10 lg:min-w-40 lg:min-h-10 
                             md:max-w-60 md:max-h-10 md:min-w-40 md:min-h-10
                             sm:max-w-60 sm:max-h-10 sm:min-w-40 sm:min-h-10">
@@ -118,9 +119,13 @@ function Studyresources(){
         {/* visible is removed from selected subject */}
         <div className={`${(selcetedsubject) ? 'block' : 'hidden'} w-full flex justify-center`}>
             <div className="border border-white rounded-lg w-[350px] h-80 overflow-hidden overflow-y-scroll flex flex-col items-center lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]">
-                <div className="text-white font-bold text-4xl w-full px-5 py-5">{selcetedsubject}</div>
+                <div className="text-white w-11/12 font-bold text-4xl py-5">{selcetedsubject}</div>
                 <div id="buttons" className="w-11/12 grid grid-cols-4 h-fit pt-2 pb-2 lg:h-10  bg-gray-500 border border-none rounded-md">
-                    <div className="w-full flex justify-center "><button className="text-white hover:bg-gray-900">THEORY</button></div>
+                    <div  onClick={() => {
+                        const newsection ="Theory";
+                        queryParams.set('section', newsection);
+                        navigate({ search: queryParams.toString() });
+                    }} className="w-full flex justify-center "><button className="text-white hover:bg-gray-900">THEORY</button></div>
                     <div onClick={() => {
                         const newsection ="Lab";
                         queryParams.set('section', newsection);
@@ -158,9 +163,9 @@ function PLAYLIST(props){
 
 
     return(
-        <div>
+        <div className="my-4">
             <div className="text-white">
-                <div>unit1</div>
+                <div className="px-4 mb-4 cursor-default ">UNIT 1</div>
                         {playlistlinks?.[semester]?.[subject]?.["unit1"]? <div className=" w-full grid md:grid-cols-4 grid-cols-3 gap-4 ">
                             {playlistlinks[semester][subject].unit1.map((items) => {
                         return(
@@ -169,7 +174,7 @@ function PLAYLIST(props){
                                 navigate("/studylayout" + "?link=" + items.src)
                             }} className="sm:h-[150px] sm:w-[150px] w-[100px] h-[100px] col-span-1">
                                 <div className="h-4/5 w-full bg-orange-400"></div>
-                                <div className="h-4 w-20 text-white">{items.title}</div>
+                                <div className="h-4 w-full text-center text-white">{items.title}</div>
                             </button>
                             </div>
                         )
@@ -288,15 +293,41 @@ function PDF(props){
     )
 }
 
-function Theory(){
+function THEORY(props){
+
+    const theorysubject = props.subject
+
+    const list = Theorycontent.find(items => items.subject === theorysubject)
+    const content = list ? list.content : [];
+    const [itemslist,setitemlist] = useState(content)
+    console.log(content)
+    console.log(itemslist)
 
 
-    return <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+    return <div className="text-white mb-5">
+        {(content.length > 0  ) ? (<div >
+            {itemslist.map(items => {
+                return ( <div>
+                <button className="w-full h-fit p-3 border border-white rounded-md text-white flex flex-col items-start my-2 hover:border-purple-400" key={items.id} onClick={() => {
+                    const id = items.id
+                    setitemlist(itemslist.map(item => ({
+                        ...item,
+                        isExpanded: item.id === id ? !item.isExpanded : item.isExpanded
+                    })));
+                }}>
+                    <div>{items.id}</div>
+                    <div>
+                        {items.isExpanded && (
+                            <div>
+                                <p>{items.content}</p>
+                            </div>
+                        )}
+                    </div>
+
+                </button> </div>)
+            })}
+        </div>) : <div>coming soon...</div>}
+    </div> 
 }
 
 

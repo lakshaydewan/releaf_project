@@ -12,4 +12,15 @@ const pdflinks = [
     }
   ];
 
-export {pdflinks}
+const Theorycontent = [
+  {subject : "APPLIED PHYSICS",
+    content : [
+      {id:"unit-1", content : "syllabus", isExpanded : false},
+      {id:"unit-2", content : "syllabus", isExpanded : false},
+      {id:"unit-3", content : "syllabus", isExpanded : false},
+      {id:"unit-4", content : "syllabus", isExpanded : false},
+    ]
+  }
+]
+
+export {pdflinks,Theorycontent}
