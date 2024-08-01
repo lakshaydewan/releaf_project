@@ -104,7 +104,11 @@ function Studyresources(){
                                 lg:text-base" onClick={() => {
                                     // setvisible(true)
                                     queryParams.set('subject', values);
-                                    queryParams.set('section', "Playlist")
+                                    if (section){
+                                        queryParams.set('section',section)
+                                    }else{
+                                        queryParams.set('section', "Theory")
+                                    }
                                     navigate({ search: queryParams.toString() });
                                 }
                                 }>{values}</button>
@@ -120,27 +124,27 @@ function Studyresources(){
         <div className={`${(selcetedsubject) ? 'block' : 'hidden'} w-full flex justify-center`}>
             <div className="border border-white rounded-lg w-[350px] h-80 overflow-hidden overflow-y-scroll flex flex-col items-center lg:min-w-[700px] lg:w-8/12 md:min-w-[700px] sm:w-[500px]">
                 <div className="text-white w-11/12 font-bold text-4xl py-5">{selcetedsubject}</div>
-                <div id="buttons" className="w-11/12 grid grid-cols-4 h-fit pt-2 pb-2 lg:h-10  bg-gray-500 border border-none rounded-md">
+                <div id="buttons" className="w-11/12 grid grid-cols-4 h-fit lg:h-10  bg-gray-500 border border-none rounded-md">
                     <div  onClick={() => {
                         const newsection ="Theory";
                         queryParams.set('section', newsection);
                         navigate({ search: queryParams.toString() });
-                    }} className="w-full flex justify-center "><button className="text-white hover:bg-gray-900">THEORY</button></div>
+                    }} className="w-full  flex justify-center items-center  px-3 py-1 text-white hover:bg-blue-400 sm:text-base text-sm">THEORY</div>
                     <div onClick={() => {
                         const newsection ="Lab";
                         queryParams.set('section', newsection);
                         navigate({ search: queryParams.toString() });
-                    }} className="w-full flex justify-center"><button className="text-white  hover:bg-gray-900">LAB</button></div>
+                    }} className="w-full flex justify-center items-center px-3 py-1 text-white hover:bg-blue-400 sm:text-base text-sm">LAB</div>
                     <div onClick={() => {
                         const newsection ="Pdf";
                         queryParams.set('section', newsection);
                         navigate({ search: queryParams.toString() });
-                    }} className="w-full flex justify-center"><button className="text-white  hover:bg-gray-900">Pdfs</button></div>
+                    }} className="w-full flex justify-center items-center  px-3 py-1 text-white hover:bg-blue-400 sm:text-base text-sm">Pdfs</div>
                     <div onClick={() => {
                         const newsection ="Playlist";
                         queryParams.set('section', newsection);
                         navigate({ search: queryParams.toString() });
-                    }} className="w-full flex justify-center"><button className="text-white  hover:bg-gray-900">PLAYLIST</button></div>
+                    }} className="w-full flex justify-center items-center  px-3 py-1 text-white hover:bg-blue-400 sm:text-base text-sm">PLAYLIST</div>
                     </div>
                 <div className=" w-10/12  pt-3">
                     <Selectedsection subject={selcetedsubject} semester={selectedsemester}/>
@@ -184,7 +188,7 @@ function PLAYLIST(props){
                             </div>
                         )
                         })}
-                        </div> : <div></div>}
+                        </div> : <div className="flex justify-center text-xl font-semibold"> coming soon</div>}
             </div>
             <div className="text-white">
                 <div className=" sm:mb-4 cursor-default md:text-3xl sm:text-2xl text-xl mb-2 font-bold ">UNIT 2</div>
@@ -206,7 +210,7 @@ function PLAYLIST(props){
                             </div>
                         )
                         })}
-                        </div> : <div></div>}
+                        </div> : <div className="flex justify-center text-xl font-semibold"> coming soon</div>}
             </div>
             <div className="text-white">
                 <div className=" sm:mb-4 cursor-default md:text-3xl sm:text-2xl text-xl mb-2 font-bold ">UNIT 3</div>
@@ -228,7 +232,7 @@ function PLAYLIST(props){
                             </div>
                         )
                         })}
-                        </div> : <div></div>}
+                        </div> : <div className="flex justify-center text-xl font-semibold">coming soon</div>}
             </div>
             <div className="text-white">
                 <div className=" sm:mb-4 cursor-default md:text-3xl sm:text-2xl text-xl mb-2 font-bold ">UNIT 4</div>
@@ -250,7 +254,7 @@ function PLAYLIST(props){
                             </div>
                         )
                         })}
-                        </div> : <div></div>}
+                        </div> : <div className="flex justify-center text-xl font-semibold"> coming soon</div>}
             </div>
             
         </div>
@@ -299,14 +303,19 @@ function PDF(props){
                         <div key={items.id} className="flex justify-center">
                             <button onClick={() => {
                             navigate("/studylayout" + "?pdflink=" + (items.title))
-                        }} className="h-[150px] w-[150px] col-span-1">
-                            <div className="h-4/5 w-full bg-orange-400"></div>
-                            <div className="h-4 w-20 text-white">{items.title}</div>
+                        }} className="h-fit w-fit col-span-1">
+                            <div className="h-fit p-1 w-full bg-black flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="md:size-28 size-16 hover:text-blue-600">
+                            <path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
+                            <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+                            </svg>
+                            </div>
+                            <div className="h-fit p-1 w-full text-white text-center">{items.title}</div>
                         </button>
                         </div>
                     )
                     })) : (<div className="w-full pt-6 text-4xl font-bold flex justify-center col-span-4">
-                        coming soon....
+                        coming soon...
                     </div>)}
                     
                 </div>
@@ -346,7 +355,7 @@ function THEORY(props){
 
                 </button> </div>)
             })}
-        </div>) : <div>coming soon...</div>}
+        </div>) : <div className="w-full pt-6 text-4xl font-bold flex justify-center ">coming soon...</div>}
     </div> 
 }
 
