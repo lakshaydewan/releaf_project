@@ -19,7 +19,7 @@ const Footer = () => {
             <p className='text-[#828282] mt-4'>
                 A product by <a href="/">
                     <span className='text-[#0d9cdb] cursor-pointer'>
-                        Punia Badmaash
+                        <p>DEVELOPER TEAM (RE-LEAF) </p>
                 </span>
                 </a>
             </p>
