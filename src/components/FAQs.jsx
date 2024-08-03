@@ -8,11 +8,11 @@ function FAQ(){
     const isInView = useInView( ref , {margin:"200px"})
 
     const initialItems = [
-        { id: 1, question: 'Question 1', content: 'Content for Question 1', isExpanded: false },
-        { id: 2, question: 'Question 2', content: 'Content for Question 2', isExpanded: false },
-        { id: 3, question: 'Question 3', content: 'Content for Question 3', isExpanded: false },
-        { id: 4, question: 'Question 4', content: 'Content for Question 4', isExpanded: false },
-        { id: 5, question: 'Question 5', content: 'Content for Question 5', isExpanded: false },
+        { id: 1, question: 'How can i contribute to RE-LEAF?', content: 'Content for Question 1', isExpanded: false },
+        { id: 2, question: 'What is the goal of RE-LEAF?', content: 'Content for Question 2', isExpanded: false },
+        { id: 3, question: 'Is this application open-sourced ?', content: 'Content for Question 3', isExpanded: false },
+        { id: 4, question: 'How to become a core team member?', content: 'Content for Question 4', isExpanded: false },
+        { id: 5, question: 'How to become a core team member', content: 'Content for Question 5', isExpanded: false },
       ];
 
       const [items, setItems] = useState(initialItems);

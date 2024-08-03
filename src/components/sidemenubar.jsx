@@ -29,24 +29,24 @@ function Sidemenubar(){
 
     
 
-    return <div className={`h-screen ${width} lg-hidden lg-w-0 bg-white fixed top-[56px] flex transition-all ease-in-out duration-1000 z-[5] space-y-3 overflow-hidden`}>
+    return <div className={`h-screen ${width} lg-hidden lg-w-0 bg-black fixed top-[56px] flex transition-all text-white ease-in-out duration-1000 z-[5] space-y-3 overflow-hidden`}>
         <div className="h-full w-full">
             <button onClick={() => {
                 setWidth("w-0")
                 navigate("/")
-            }} className="w-full h-[40px] border-black border-b-2 flex items-end text-2xl font-semibold px-2 hover:text-white hover:bg-black">Home</button>
+            }} className="w-full h-[40px] border-white border-b-2 flex items-end text-2xl font-semibold px-2 hover:bg-[#1f1f1f]">Home</button>
             <button onClick={() => {
                 setWidth("w-0")
                 navigate("/assigment")
-            }} className="w-full h-[40px] border-black border-b-2 flex items-end text-2xl font-semibold px-2 hover:text-white hover:bg-black">ASSIGNMENT</button>
+            }} className="w-full h-[40px] border-white border-b-2 flex items-end text-2xl font-semibold px-2 hover:bg-[#1f1f1f]">ASSIGNMENT</button>
             <button onClick={() => {
                 setWidth("w-0")
                 navigate("/studyresources")
-            }} className="w-full h-[40px] border-black border-b-2 flex items-end text-2xl font-semibold px-2 hover:text-white hover:bg-black">RESOURCES</button>
+            }} className="w-full h-[40px] border-white border-b-2 flex items-end text-2xl font-semibold px-2 hover:bg-[#1f1f1f]">RESOURCES</button>
             <button onClick={() => {
                 setWidth("w-0")
                 navigate("/Home")
-            }} className="w-full h-[40px] border-black border-b-2 flex items-end text-2xl font-semibold px-2 hover:text-white hover:bg-black">STUDYLAYOUT</button>
+            }} className="w-full h-[40px] border-white border-b-2 flex items-end text-2xl font-semibold px-2 hover:bg-[#1f1f1f]">STUDYLAYOUT</button>
         </div>
     </div>
 }
