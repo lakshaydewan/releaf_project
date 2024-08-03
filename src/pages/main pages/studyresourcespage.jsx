@@ -27,9 +27,7 @@ function Studyresources(){
         Lab: LAB,
         Pdf: PDF,
         Theory : THEORY,
-        default : () => {
-            return <div></div>
-        }
+        default : THEORY
       };
 
     const Selectedsection = components[section]
@@ -163,8 +161,6 @@ function PLAYLIST(props){
     const subject = props.subject
     console.log("semester for video playlist",semester)
     console.log("subject for video playlist,video",subject)
-    console.log(playlistlinks[semester][subject],"hello")
-
 
     return(
         <div className="my-4 space-y-4">
