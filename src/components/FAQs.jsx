@@ -22,7 +22,7 @@ function FAQ(){
     return <motion.div ref={ref} initial={{opacity:0, scale:0.8}} whileInView={{ opacity: 1, scale:1 }} transition={{
         duration : 0.5,
         delay : 0.3
-    }} className="w-full flex items-center justify-center barlow-condensed-light tracking-wider">
+    }} className="w-full flex items-center justify-center barlow-condensed-light tracking-wider mt-44">
         <div id="content div" className="w-9/12 md:w-9/12 p-8 border rounded-3xl border-none space-y-4
                                         lg:flex lg:space-x-4 lg:h-auto bg-[#18181b]">
             <div id="left-section" className="space-y-10 w-2/5

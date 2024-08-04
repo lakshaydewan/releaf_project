@@ -48,7 +48,7 @@ function Home(){
         <Imageslider />
         <Section1 custompaddings="py-10" classname="pt-0 mt-[4rem]" id="faq ">
         <div className="flex justify-center">
-            <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-4xl xl:text-5xl px-8 barlow-condensed-semibold mb-20">
+            <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-4xl xl:text-5xl px-8 barlow-condensed-semibold sm:mb-14 mb-0 mt-32">
                 Get In Touch
             </h1>
         </div>
