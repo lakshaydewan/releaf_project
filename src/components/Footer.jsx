@@ -6,8 +6,8 @@ const Footer = () => {
 
     const navigate = useNavigate()
   return (
-    <div className='flex justify-between barlow-condensed-light border-t-[0.5px] text-white border-[#1a1919] pb-44 pt-28 mt:10 md:mt-20 lg:mt-36'>
-        <div className='ml-8 sm:ml-16 xl:ml-24'>
+    <div className='sm:flex sm:justify-between flex flex-col space-y-2 barlow-condensed-light border-t-[0.5px] text-white border-[#1a1919] pb-44 pt-28 mt:10 md:mt-20 lg:mt-36'>
+        <div className='ml-8 sm:ml-16 xl:ml-24 sm:flex-col flex justify-between items-center'>
             <div className='flex items-center gap-1.5'>
                <div className='w-6 h-6 bg-[lightblue] rounded-lg'>
                     
@@ -16,6 +16,7 @@ const Footer = () => {
                     Releaf
                </span>
             </div>
+            <div className='mr-6 sm:mr-0 pt-6 sm:pt-0'>
             <p className='text-[#828282] mt-4'>
                 A product by <a href="/">
                     <span className='text-[#0d9cdb] cursor-pointer'>
@@ -30,8 +31,9 @@ const Footer = () => {
                 </span>
                 </a>
             </p>
+            </div>
         </div>
-        <div className='flex gap-6 mr-8 sm:mr-20 xl:mr-32'>   
+        <div className='flex gap-6 mr-8 sm:mr-20 xl:mr-32 sm:ml-0 ml-6'>   
             <div className='flex-row space-y-1.5'>
                 <ButtonSmall title={"terms and conditions"} onClick={() => {
                     navigate("/termsandconditions")

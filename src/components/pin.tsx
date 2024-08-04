@@ -8,7 +8,7 @@ import { Imgaecompnent } from "./imagecomponent";
 
 export const PinContainer = ({
   children,
-  title= "hello world",
+  title= "coming soon...",
   href,
   className,
   containerClassName,
@@ -166,3 +166,4 @@ export const PinPerspective = ({
     </motion.div>
   );
 };
+
