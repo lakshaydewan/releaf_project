@@ -1,5 +1,5 @@
 import { useRef, useState } from "react"
-import { motion, useInView } from "framer-motion";
+import { easeInOut, easeOut, motion, useInView, AnimatePresence } from "framer-motion";
 
 
 function FAQ(){
@@ -8,11 +8,11 @@ function FAQ(){
     const isInView = useInView( ref , {margin:"200px"})
 
     const initialItems = [
-        { id: 1, question: 'How can i contribute to RE-LEAF?', content: 'Content for Question 1', isExpanded: false },
-        { id: 2, question: 'What is the goal of RE-LEAF?', content: 'Content for Question 2', isExpanded: false },
-        { id: 3, question: 'Is this application open-sourced ?', content: 'Content for Question 3', isExpanded: false },
-        { id: 4, question: 'How to become a core team member?', content: 'Content for Question 4', isExpanded: false },
-        { id: 5, question: 'How to become a core team member', content: 'Content for Question 5', isExpanded: false },
+        { id: 1, question: 'How can i contribute to RE-LEAF?', content:'You can contribute by solving open issues at our Github repository or by joining the dev community on discord.', isExpanded: false },
+        { id: 2, question: 'What is the goal of RE-LEAF?', content: "Releaf's goal is to make the studying experience as hassle-free and as rich as possible for university students.", isExpanded: false },
+        { id: 3, question: 'Is this application open-source?', content: 'Yes, Releaf is completely open-sourced you can find the complete source-code of the application on our Github repository.', isExpanded: false },
+        { id: 4, question: 'How to become a core team member?', content: 'Becoming a core team member is not easy. However, you can demonstrate your work and experience by contributing to our GitHub repository and being active on our dev community at discord.', isExpanded: false },
+        { id: 5, question: 'What we really are?', content: 'Here on Releaf you can find everything you will ever need to score good marks at your university. But Releaf is more than that, we wish to provide students with opportunities to learn, network and to build crazy-awesome projects together.', isExpanded: false },
       ];
 
       const [items, setItems] = useState(initialItems);
@@ -22,11 +22,9 @@ function FAQ(){
     return <motion.div ref={ref} initial={{opacity:0, scale:0.8}} whileInView={{ opacity: 1, scale:1 }} transition={{
         duration : 0.5,
         delay : 0.3
-    }} className="w-full flex items-center justify-center">
+    }} className="w-full flex items-center justify-center barlow-condensed-light tracking-wider">
         <div id="content div" className="w-9/12 md:w-9/12 p-8 border rounded-3xl border-none space-y-4
-                                        lg:flex lg:space-x-4 lg:h-auto " style={{
-            backgroundColor : "transparent",
-            backgroundImage: "linear-gradient(120deg ,rgba(112,128,144,0.3),rgba(44, 62, 80 ,0.3)" }}>
+                                        lg:flex lg:space-x-4 lg:h-auto bg-[#18181b]">
             <div id="left-section" className="space-y-10 w-2/5
                                             lg:2/5" >
                 <div id="upper-section" className="space-y-1">
@@ -47,16 +45,25 @@ function FAQ(){
                             ...item,
                             isExpanded: item.id === id ? !item.isExpanded : item.isExpanded
                           })));
-                    }} className="bg-gray-700 w-full cursor-pointer text-white font-semibold text-xl h-fit border rounded-2xl space-y-4 p-6">
+                    }} className="w-full cursor-pointer text-white font-semibold text-xl h-fit border-[1px] border-gray-100 rounded-2xl space-y-4 p-6">
                         <div className="flex justify-between">
                             <div>{item.question}</div>
                             <div>+</div>
                         </div>
-                        {item.isExpanded && (
-                            <div  id="hidden content" className="font-normal text-base" style={{transition: 'Height 0.3s ease'}}>
+                <AnimatePresence>
+                    {item.isExpanded && (
+                        <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "min-content", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0}}
+                            transition={{ duration: 0.7, ease: easeOut}}
+                            id="hidden-content"
+                            className="font-normal text-base"
+                            >
                             <p>{item.content}</p>
-                            </div>
-                        )}
+                        </motion.div>
+                    )}
+                </AnimatePresence>
                     
                     </div>
                 ))} 
