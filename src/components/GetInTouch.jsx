@@ -43,7 +43,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className="text-white custom-container flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0 p-4 md:gap-5 sm:pag-4 barlow-condensed-normal lg:mb-72">
+    <div className="text-white custom-container flex flex-col md:flex-row md:space-x-8 sm:space-y-8 md:space-y-0 p-4 md:gap-5 sm:pag-4 barlow-condensed-normal lg:mb-72">
       <div className="w-full md:w-1/2 p-4 overflow-auto md:order-2">
         <h1 className="text-3xl mb-4 barlow-condensed-semibold">
         <TypeAnimation
@@ -67,9 +67,9 @@ const GetInTouch = () => {
         <p className='barlow-condensed-light sm:text-xl text-md'>
         Whatever is in your mind, feel free to write to us. We will definitely address your concerns. 
         </p>
-        <div className='flex-col space-y-4 mt-7'>
+        <div className='flex space-x-4 mt-7'>
         <div>
-        <FaXTwitter className='size-6'/>
+        <FaXTwitter className='size-6 '/>
         </div>
         <div>
         <FaDiscord  className='size-6'/>

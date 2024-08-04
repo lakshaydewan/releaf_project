@@ -9,7 +9,7 @@ const Bentogrid = () => {
     return(
 <Section1 custompaddings="py-5" classname="pt-[12rem] mt-32 mb-72" id="bent grid">
     <div className="w-full flex flex-col  items-center">
-        <div className="relative z-[1] max-w-[62rem] mx-auto text-center mb-[3rem] md:mb-16 lg:mb-[4rem] ">
+        <div className="relative z-[1] max-w-[62rem] mx-auto text-center mb-[3rem] md:mb-16 lg:mb-[4rem] w-10/12 ">
             <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-4xl xl:text-6xl px-8 barlow-condensed-semibold mb-3">
                 What we offer
             </h1>

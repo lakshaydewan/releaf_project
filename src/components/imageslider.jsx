@@ -10,15 +10,16 @@ const Imageslider = () => {
 
 
     return(
-        <Section1  classname="pt-0 mt-[0rem] lg:mb-36 md:20 mb-10"
+        <Section1  classname="pt-0 mt-[0rem] lg:mb-36 md:20 mb-10 flex flex-col items-center"
         id="image slider">
+            <div className="text-white text-center w-10/12 mb-10">event callender</div>
             <div className="flex mb-12 overflow-hidden " id="container">
-                <div id="slider" ref={sliderRef} className="pl-[50%] pr-[50%] relative flex overflow-hidden snap-x snap-mandatory space-x-20">
-                    <div ref={slidesref} className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500 sm:aspect-[1024/490] aspect-[4/3] ">sds</div>
-                    <div className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500  sm:aspect-[1024/490] aspect-[4/3]">sfs</div>
-                    <div className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500  sm:aspect-[1024/490] aspect-[4/3]">sdf</div>
-                    <div className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500  sm:aspect-[1024/490] aspect-[4/3]">sfds</div>
-                    <div className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500  sm:aspect-[1024/490] aspect-[4/3]">sdfs</div>
+                <div id="slider" ref={sliderRef} className="pl-[50%] pr-[50%] relative flex overflow-hidden snap-x snap-mandatory space-x-20 ">
+                    <div ref={slidesref} className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500 sm:aspect-[1024/490] aspect-[16/9] ">sds</div>
+                    <div className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500  sm:aspect-[1024/490] aspect-[16/9]">sfs</div>
+                    <div className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500  sm:aspect-[1024/490] aspect-[16/9]">sdf</div>
+                    <div className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500  sm:aspect-[1024/490] aspect-[16/9]">sfds</div>
+                    <div className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500  sm:aspect-[1024/490] aspect-[16/9]">sdfs</div>
                 </div>
             </div>
             <div className="flex w-full justify-center space-x-4 h-12">
