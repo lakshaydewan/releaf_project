@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Section1 } from "./sectionnew"
+import React from 'react'
+import { TypeAnimation } from 'react-type-animation'
 
 
 
@@ -10,9 +12,13 @@ const Imageslider = () => {
 
 
     return(
-        <Section1  classname="pt-0 mt-[0rem] lg:mb-36 md:20 mb-10 flex flex-col items-center"
+        <Section1  classname="pt-0 sm:mt-[0rem] mt-[-8.25rem] lg:mb-36 md:mb-20 mb-10 flex flex-col items-center"
         id="image slider">
-            <div className="text-white text-center w-10/12 mb-10">event callender</div>
+            <div className="text-white text-center w-full mb-10 flex-col"><h1 className="text-white font-bold text-xl md:text-4xl lg:text-4xl xl:text-6xl px-8 barlow-condensed-semibold mb-3">
+                EVENT CALLENDER GET UPDATED WITH LATEST 
+            </h1><span >
+                <TypeWriter></TypeWriter>
+                </span></div>
             <div className="flex mb-12 overflow-hidden " id="container">
                 <div id="slider" ref={sliderRef} className="pl-[50%] pr-[50%] relative flex overflow-hidden snap-x snap-mandatory space-x-20 ">
                     <div ref={slidesref} className="snap-center lg:min-w-[1024px] md:min-w-[700px] sm:min-w-[500px] min-w-[300px] bg-blue-500 sm:aspect-[1024/490] aspect-[16/9] ">sds</div>
@@ -44,5 +50,28 @@ const Imageslider = () => {
         </Section1>
     )
 }
+
+const TypeWriter = () => {
+    return (
+      <TypeAnimation
+        sequence={[
+          // Same substring at the start will only be typed out once, initially
+          "COLLEGE FESTS",
+          800, // wait 1s before replacing "Mice" with "Hamsters"
+          'EVENTS',
+          800,
+          "HACKATHONS",
+          1000
+        ]}
+        wrapper="span"
+        speed={60}
+        style={{ display: 'inline-block' }}
+        className="text-white font-bold text-xl md:text-4xl lg:text-4xl xl:text-6xl barlow-condensed-semibold mb-3"
+        repeat={Infinity}
+        deletionSpeed={0}
+      />
+    )
+  }
+  
 
 export {Imageslider}

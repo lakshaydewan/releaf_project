@@ -61,7 +61,7 @@ function Studylyout() {
         {(videolink == "") ? (<div className="w-full h-full flex justify-center mt-2">
             <button onClick={() => {
                     if (width2 == "w-0"){
-                        setwidth2("w-96")
+                        setwidth2("sm:w-96 w-full")
                     }else{
                         setwidth2("w-0")
                     }
@@ -72,7 +72,7 @@ function Studylyout() {
                 <div className="w-full space-y-2">
                     <button onClick={() => {
                     if (width2 == "w-0"){
-                        setwidth2("w-96")
+                        setwidth2("sm:w-96 w-full")
                     }else{
                         setwidth2("w-0")
                     }
@@ -87,7 +87,7 @@ function Studylyout() {
         {(pdf == null) ? (<div className="w-full h-full flex justify-center mt-2">
             <button onClick={() => {
                     if (width2 == "w-0"){
-                        setwidth2("w-96")
+                        setwidth2("sm:w-96 w-full")
                     }else{
                         setwidth2("w-0")
                     }

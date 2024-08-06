@@ -87,16 +87,16 @@ function Studyresources(){
             <div id="subjects">
                 {listofsubjects.map(subject => {
                     if (subject.semester == selectedsemester && subject.branch == selectedbranch ){
-                        return <div className="grid grid-cols-2 gap-6 px-5 pb-3
+                        return <div className="grid grid-cols-2 sm:gap-6 gap-x-4 gap-y-3 px-5 pb-3
                         sm:grid sm:grid-cols-2 sm:px-10
                         md:grid-cols-3 md:px-10
                         lg:grid-cols-3 lg:px-10">
                             {subject.value.map(values => {
-                            return <div className="bg-white max-w-40 max-h-10 min-w-32  h-8 flex items-center border border-none rounded-md
+                            return <div className="bg-white max-w-40 max-h-10  min-w-32 h-8 flex items-center border border-none rounded-md
                             lg:max-w-60 lg:max-h-10 lg:min-w-40 lg:min-h-10 
                             md:max-w-60 md:max-h-10 md:min-w-40 md:min-h-10
                             sm:max-w-60 sm:max-h-10 sm:min-w-40 sm:min-h-10">
-                                <button className="w-full text-center text-sm 
+                                <button className="w-full py-1 sm:py-0 text-center text-sm 
                                 sm:text-base
                                 md:text-base
                                 lg:text-base" onClick={() => {
@@ -127,22 +127,22 @@ function Studyresources(){
                         const newsection ="Theory";
                         queryParams.set('section', newsection);
                         navigate({ search: queryParams.toString() });
-                    }} className="w-full  flex justify-center items-center  px-3 py-1 text-white hover:bg-blue-400 sm:text-base text-sm">THEORY</div>
+                    }} className="w-full  flex justify-center items-center  px-3 py-1 text-white hover:bg-[#1f1f1f] cursor-pointer sm:text-base text-sm">THEORY</div>
                     <div onClick={() => {
                         const newsection ="Lab";
                         queryParams.set('section', newsection);
                         navigate({ search: queryParams.toString() });
-                    }} className="w-full flex justify-center items-center px-3 py-1 text-white hover:bg-blue-400 sm:text-base text-sm">LAB</div>
+                    }} className="w-full flex justify-center items-center px-3 py-1 text-white hover:bg-[#1f1f1f] cursor-pointer sm:text-base text-sm">LAB</div>
                     <div onClick={() => {
                         const newsection ="Pdf";
                         queryParams.set('section', newsection);
                         navigate({ search: queryParams.toString() });
-                    }} className="w-full flex justify-center items-center  px-3 py-1 text-white hover:bg-blue-400 sm:text-base text-sm">Pdfs</div>
+                    }} className="w-full flex justify-center items-center  px-3 py-1 text-white hover:bg-[#1f1f1f] cursor-pointer sm:text-base text-sm">Pdfs</div>
                     <div onClick={() => {
                         const newsection ="Playlist";
                         queryParams.set('section', newsection);
                         navigate({ search: queryParams.toString() });
-                    }} className="w-full flex justify-center items-center  px-3 py-1 text-white hover:bg-blue-400 sm:text-base text-sm">PLAYLIST</div>
+                    }} className="w-full flex justify-center items-center  px-3 py-1 text-white hover:bg-[#1f1f1f] cursor-pointer sm:text-base text-sm">PLAYLIST</div>
                     </div>
                 <div className=" w-10/12  pt-3">
                     <Selectedsection subject={selcetedsubject} semester={selectedsemester}/>
@@ -173,8 +173,8 @@ function PLAYLIST(props){
                                 <button onClick={() => {
                                 navigate("/studylayout" + "?link=" + items.src)
                             }} className="md:h-[100px] md:w-[150px] w-[100px] h-[80px] col-span-1">
-                                <div className=" w-full aspect-[16/9] border border-white rounded-xl bg-black flex justify-center items-center hover:bg-blue-500 ">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 sm:size-12 md:size:16">
+                                <div className=" w-full aspect-[16/9] border border-white hover:border-purple-400 rounded-xl bg-black flex justify-center items-center  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 sm:size-12 md:size:16 hover:text-purple-400 w-full">
                                 <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
                                 </svg>
 
@@ -195,8 +195,8 @@ function PLAYLIST(props){
                                 <button onClick={() => {
                                 navigate("/studylayout" + "?link=" + items.src)
                             }} className="md:h-[100px] md:w-[150px] w-[100px] h-[80px] col-span-1">
-                                <div className=" w-full aspect-[16/9] border border-white rounded-xl bg-black flex justify-center items-center hover:bg-blue-500 ">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 sm:size-12 md:size:16">
+                                <div className=" w-full aspect-[16/9] border border-white hover:border-purple-400 rounded-xl bg-black flex justify-center items-center ">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 sm:size-12 md:size:16 w-full hover:text-purple-400">
                                 <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
                                 </svg>
 
@@ -217,8 +217,8 @@ function PLAYLIST(props){
                                 <button onClick={() => {
                                 navigate("/studylayout" + "?link=" + items.src)
                             }} className="md:h-[100px] md:w-[150px] w-[100px] h-[80px] col-span-1">
-                                <div className=" w-full aspect-[16/9] border border-white rounded-xl bg-black flex justify-center items-center hover:bg-blue-500 ">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 sm:size-12 md:size:16">
+                                <div className=" w-full aspect-[16/9] border border-white hover:border-purple-400 rounded-xl bg-black flex justify-center items-center  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 sm:size-12 md:size:16 w-full hover:text-purple-400">
                                 <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
                                 </svg>
 
@@ -239,8 +239,8 @@ function PLAYLIST(props){
                                 <button onClick={() => {
                                 navigate("/studylayout" + "?link=" + items.src)
                             }} className="md:h-[100px] md:w-[150px] w-[100px] h-[80px] col-span-1">
-                                <div className=" w-full aspect-[16/9] border border-white rounded-xl bg-black flex justify-center items-center hover:bg-blue-500 ">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 sm:size-12 md:size:16">
+                                <div className=" w-full aspect-[16/9] border border-white hover:border-purple-400 rounded-xl bg-black flex justify-center items-center ">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 sm:size-12 md:size:16 w-full  hover:text-purple-400">
                                 <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
                                 </svg>
 
@@ -301,7 +301,7 @@ function PDF(props){
                             navigate("/studylayout" + "?pdflink=" + (items.title))
                         }} className="h-fit w-fit col-span-1">
                             <div className="h-fit p-1 w-full bg-black flex justify-center items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="md:size-28 size-16 hover:text-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="md:size-28 size-16 hover:text-purple-400">
                             <path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
                             <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
                             </svg>

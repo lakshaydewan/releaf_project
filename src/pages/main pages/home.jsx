@@ -39,11 +39,6 @@ function Home(){
         <Sidemenubar />
         <Herosection />
         <Bentogrid />
-        <div className="flex justify-center">
-            <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-4xl xl:text-5xl px-8 barlow-condensed-semibold mb-0">
-                Some of Our Products
-            </h1>
-        </div>
         <Productsection />
         <Imageslider />
         <Section1 custompaddings="py-10" classname="pt-0 mt-[4rem]" id="faq ">

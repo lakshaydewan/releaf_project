@@ -5,7 +5,7 @@ import {easeInOut, motion} from "framer-motion";
 
 const Herosection = () => {
     return(
-        <Section1 classname="pt-[12rem] -mt-[5.25rem]" 
+        <Section1 classname="sm:pt-[12rem] pt-[6rem] -mt-[5.25rem]" 
         id="hero">
             <div className="pt-44 relative">
                 <div className="relative z-[1] max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[3rem]">
@@ -25,7 +25,7 @@ const Herosection = () => {
                     </p>
                     <Loginbutton content={"get started"}/>
                 </div>
-                <div className="relative max-w-[23rem] mx-auto md:max-w-3xl lg:max-w-5xl xl:mb-24 mt-72">
+                <div className="relative max-w-[23rem] mx-auto md:max-w-3xl lg:max-w-5xl xl:mb-24 sm:mt-72 mt-40 ">
                     <div className="relative z-[1] p-0.5 rounded-2xl bg-coinic-gradient">
                         <motion.div 
                         initial={{y: 50, opacity: 0.3}}
@@ -47,6 +47,11 @@ const Herosection = () => {
                     <div className="absolute top-[10%] lg:top-[20%] left-1/2 w-[200%] -translate-x-1/2 md:w-[150%] flex justify-center">
                      <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[250px] border border-none rounded-full bg-purple-400 blur-[200px]"></div>
                     </div> */}
+                    <div className="absolute top-[-280%] lg:top-[-240%] left-[49%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                    </div>
                     <div className="absolute top-[10%] lg:top-[20%] left-[49%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
                      <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
                      <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
