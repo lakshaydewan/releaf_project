@@ -23,7 +23,7 @@ function FAQ(){
         duration : 0.5,
         delay : 0.3
     }} className="w-full flex items-center justify-center barlow-condensed-light tracking-wider mt-44">
-        <div id="content div" className="w-9/12 md:w-9/12 p-8 border rounded-3xl border-none space-y-4
+        <div id="content div" className=" w-9/12 md:w-9/12 p-8 border rounded-3xl border-none space-y-4
                                         lg:flex lg:space-x-4 lg:h-auto bg-[#18181b]">
             <div id="left-section" className="space-y-10 w-2/5
                                             lg:2/5" >
@@ -45,7 +45,7 @@ function FAQ(){
                             ...item,
                             isExpanded: item.id === id ? !item.isExpanded : item.isExpanded
                           })));
-                    }} className="w-full cursor-pointer text-white font-semibold text-xl h-fit border-[1px] border-gray-100 rounded-2xl space-y-4 p-6">
+                    }} className="w-full cursor-pointer text-white font-semibold text-base sm:text-xl h-fit border-[1px] border-gray-100 rounded-2xl space-y-4 p-6">
                         <div className="flex justify-between">
                             <div>{item.question}</div>
                             <div>+</div>
@@ -58,7 +58,7 @@ function FAQ(){
                             exit={{ height: 0, opacity: 0}}
                             transition={{ duration: 0.7, ease: easeOut}}
                             id="hidden-content"
-                            className="font-normal text-base"
+                            className="font-normal sm:text-base text-sm"
                             >
                             <p>{item.content}</p>
                         </motion.div>
