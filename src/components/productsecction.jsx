@@ -41,10 +41,10 @@ const Productsection = () => {
                     </PinContainer>
                     </div>
                 </div>
-                <div className="absolute z-[1] top-[10%] lg:top-[60%] left-[100%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
-                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px]  border border-none rounded-full bg-blue-600 blur-[300px]"></div>
-                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-blue-600 blur-[300px]"></div>
-                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] h-[550px] border border-none rounded-full bg-blue-600 blur-[300px]"></div>
+                <div className="absolute top-[10%] left-[0%] sm:top-[10%] lg:top-[80%] sm:left-[-35%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
+                <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
                 </div>
         </Section1>
     )

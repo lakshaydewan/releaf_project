@@ -43,7 +43,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className="text-white custom-container flex flex-col md:flex-row md:space-x-8 sm:space-y-8 md:space-y-0 p-4 md:gap-5 sm:pag-4 barlow-condensed-normal lg:mb-72">
+    <div className="relative text-white custom-container flex flex-col md:flex-row md:space-x-8 sm:space-y-8 md:space-y-0 p-4 md:gap-5 sm:pag-4 barlow-condensed-normal lg:mb-72">
       <div className="w-full md:w-1/2 p-4 overflow-auto md:order-2">
         <h1 className="text-3xl mb-4 barlow-condensed-semibold">
         <TypeAnimation
@@ -146,6 +146,16 @@ const GetInTouch = () => {
           </div>
         </form>
       </div>
+      <div className="absolute top-[90%] sm:top-[80%] lg:top-[100%] left-[130%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
+      <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                    <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                    <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                </div>
+                <div className="absolute top-[220%] md:top-[300%] md:left-[-40%] lg:top-[300%] left-[-10%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
+                <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                    <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                    <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                </div>          
     </div>
   );
 };

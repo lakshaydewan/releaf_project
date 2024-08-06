@@ -69,6 +69,7 @@ function FAQ(){
                 ))} 
             </div>
 
+        
         </div>
     </motion.div>
 }

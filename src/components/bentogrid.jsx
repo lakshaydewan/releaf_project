@@ -61,6 +61,16 @@ const Bentogrid = () => {
             </div>
         </div>
     </div>
+    <div className="absolute top-[20%] left-[0%] sm:top-[50%] lg:top-[15%] sm:left-[-40%] w-[100%] md:top-[50%] -translate-x-1/2 md:w-[100%] flex justify-center">
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px]  h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                    </div>
+    <div className="absolute top-[70%] left-[80%] sm:top-[100%] lg:top-[100%] sm:left-[120%] w-[100%] md:top-[90%] -translate-x-1/2 md:w-[100%] flex justify-center">
+        <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+        <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+        <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+    </div>
 </Section1>
     )
 }

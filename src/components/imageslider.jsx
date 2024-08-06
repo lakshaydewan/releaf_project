@@ -47,6 +47,20 @@ const Imageslider = () => {
               </svg>
               </button>
             </div>
+            <div className="absolute top-[-180%] left-[100%] lg:top-[20%] md:left-[130%] sm:left-[100%] md:top-[-100%] sm:top-[-180%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
+                <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                </div>
+                <div className="absolute top-[10%] lg:top-[100%] left-[-40%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
+                    <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                    <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                    <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                </div>
+                <div className="absolute top-[10%] lg:top-[50%] left-[49%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
+                    <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[50px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
+                     
+                </div>
         </Section1>
     )
 }
