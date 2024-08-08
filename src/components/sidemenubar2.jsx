@@ -10,6 +10,7 @@ import { pdflinks } from "./links";
 
 function Sidemenubar2(){
     const [width2, setwidth2] = useRecoilState(WidthAtom2);
+    const [width, setWidth] = useRecoilState(WidthAtom);
     const [isopen2, setisopen2] = useRecoilState(SideBarAtom2)
     const navigate = useNavigate()
     const location = useLocation()
@@ -70,7 +71,7 @@ function Sidemenubar2(){
     return <div className={`h-screen ${width2} lg-hidden lg-w-0 bg-black text-white fixed top-[56px] flex flex-col transition-all ease-in-out duration-1000 z-[5] overflow-hidden overflow-y-scroll pb-32`}>
       <div className="w-full flex justify-end p-3 "><div className="relative group" onClick={() => {
         setwidth2("w-0")
-      }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 cursor-pointer fill-black stroke:white hover:fill-white hover:stroke-black">
+      }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 cursor-pointer transition-all ease-in-out duration-500 fill-black stroke:white hover:fill-white hover:stroke-black">
         <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
       </svg>
       <div className="absolute z-[20] bottom-[-30px] mb-2 left-1/2 transform -translate-x-1/2 w-max bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

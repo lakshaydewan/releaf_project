@@ -3,12 +3,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Loginbutton } from "./button";
 import { useRecoilState } from "recoil";
-import { SideBarAtom, WidthAtom } from "../atoms/atoms";
+import { SideBarAtom, WidthAtom, WidthAtom2 } from "../atoms/atoms";
 
 function Navbar(){
 
     const [width, setWidth] = useRecoilState(WidthAtom);
-    const [visible,setvisible] = useState(false)
+    const [visible,setvisible] = useState(false);
+    const [width2, setwidth2] = useRecoilState(WidthAtom2);
     const navigate = useNavigate()
     const { user, loginWithRedirect, logout, isLoading } = useAuth0();
     if (user){
@@ -27,6 +28,7 @@ function Navbar(){
                 <button className="w-fit" onClick={() => {
                     if (width == "w-0"){
                         setWidth("w-60")
+                        setwidth2("w-0")
                     }else{
                         setWidth("w-0")
                     }
@@ -45,13 +47,13 @@ function Navbar(){
                 navigate("/")
             }} className="text-[#838383] text-lg hover:text-white cursor-pointer duration-200 hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-lg font-normal">Home</div>
             <div onClick={(e) => {
-                navigate("/assigment")
+                navigate("/studylayout")
             }} className="text-[#838383] text-lg hover:text-white cursor-pointer duration-200 hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-lg font-normal">Playlists</div>
             <div onClick={(e) => {
                 navigate("/studyresources")
             }} className="text-[#838383] text-lg hover:text-white cursor-pointer duration-200 hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-lg font-normal">Resources</div>
-            <div className="text-[#838383] text-lg hover:text-white cursor-pointer duration-200 hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-lg font-normal">Store</div>
-            <div className="text-[#838383] text-lg hover:text-white cursor-pointer duration-200 hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-lg font-normal">Info</div>
+            <div className="text-[#838383] text-lg hover:text-white cursor-not-allowed duration-200 hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-lg font-normal ">Store</div>
+            <div className="text-[#838383] text-lg hover:text-white cursor-not-allowed duration-200 hover:decoration-1 hover:scale-103 hover:bg-[#1f1f1f] px-4 py-1 rounded-lg font-normal ">Info</div>
         </div>
         <div className="flex w-48 h-full items-center justify-center ">
             {isLoading ? 

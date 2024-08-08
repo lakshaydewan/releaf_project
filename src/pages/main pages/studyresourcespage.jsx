@@ -288,6 +288,8 @@ function PDF(props){
     const navigate = useNavigate()
     const queryParams = new URLSearchParams(location.search);
     const selcetedsubject =  queryParams.get('subject') || '';
+    const selectedsemester =  queryParams.get('semester') || '';
+    const selectedbranch = queryParams.get('branch') || '';
     const subject = pdflinks.find(pdf => pdf.subject === selcetedsubject);
     const links = subject ? subject.links : [];
 
@@ -298,7 +300,7 @@ function PDF(props){
                     return(
                         <div key={items.id} className="flex justify-center">
                             <button onClick={() => {
-                            navigate("/studylayout" + "?pdflink=" + (items.title))
+                            navigate("/studylayout" + "?pdflink=" + (items.title) +"&semester=" + (selectedsemester) + "&branch=" + (selectedbranch) + "&subject=" + (selcetedsubject) )
                         }} className="h-fit w-fit col-span-1">
                             <div className="h-fit p-1 w-full bg-black flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="md:size-28 size-16 hover:text-purple-400">

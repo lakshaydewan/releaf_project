@@ -62,6 +62,7 @@ function Studylyout() {
             <button onClick={() => {
                     if (width2 == "w-0"){
                         setwidth2("sm:w-96 w-full")
+                        setWidth("w-0")
                     }else{
                         setwidth2("w-0")
                     }
@@ -73,6 +74,7 @@ function Studylyout() {
                     <button onClick={() => {
                     if (width2 == "w-0"){
                         setwidth2("sm:w-96 w-full")
+                        setWidth("w-0")
                     }else{
                         setwidth2("w-0")
                     }
@@ -88,6 +90,7 @@ function Studylyout() {
             <button onClick={() => {
                     if (width2 == "w-0"){
                         setwidth2("sm:w-96 w-full")
+                        setWidth("w-0")
                     }else{
                         setwidth2("w-0")
                     }

@@ -146,12 +146,12 @@ const GetInTouch = () => {
           </div>
         </form>
       </div>
-      <div className="absolute top-[90%] sm:top-[80%] lg:top-[100%] left-[130%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
+      <div className="absolute top-[90%] sm:top-[80%] lg:top-[100%] left-[130%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center z-[1]">
       <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
                 </div>
-                <div className="absolute top-[220%] md:top-[300%] md:left-[-40%] lg:top-[300%] left-[-10%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center">
+                <div className="absolute top-[220%] md:top-[300%] md:left-[-40%] lg:top-[300%] left-[-10%] w-[100%] -translate-x-1/2 md:w-[100%] flex justify-center z-[1]">
                 <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px]  border border-none rounded-full bg-purple-400 blur-[300px]"></div>
                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
                     <div className="lg:w-[700px] lg:h-[200px] w-[400px] md:h-[150px] h-[150px] border border-none rounded-full bg-purple-400 blur-[300px]"></div>
