@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Sidemenubar } from "../../components/sidemenubar";
 import { useLocation, useNavigate} from "react-router-dom"
 import { playlistlinks } from "../../assets/links/links";
-import { pdflinks, Theorycontent } from "../../components/links";
+import { listofsubject, pdflinks, Theorycontent } from "../../components/links";
 
 
 
@@ -39,15 +39,7 @@ function Studyresources(){
     // const [subject,setsubject] = useState("");
     // const [visible,setvisible] = useState(false)
 
-    const listofsubjects = [
-        { id:1 ,semester:'1st', branch:'IT',  value:['APPLIED MATHS', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2',"MANUFACTURING PROCESS"]},
-        { id:1 ,semester:'2nd', branch:'IT',  value:['APPLIED PHYSICS I2', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
-        { id:1 ,semester:'3rd', branch:'IT',  value:['APPLIED PHYSICS I3', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
-        { id:1 ,semester:'4th', branch:'IT',  value:['APPLIED PHYSICS I4', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
-        { id:1 ,semester:'5th', branch:'IT',  value:['APPLIED PHYSICS I5', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
-        { id:1 ,semester:'6th', branch:'IT',  value:['APPLIED PHYSICS I6', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
-
-    ]
+    const listofsubjects = listofsubject;
 
 
     const handleValueReturnforsemster = (value) => {
@@ -78,7 +70,7 @@ function Studyresources(){
             sm:text-white sm:text-2xl sm:text-bold sm:h-full sm:flex sm:items-center"> BTECH</div>
             {/* onvaluereturn and content2 are new props added */}
             <Dropdown content={"SEMESTER"} items={['1st','2nd','3rd','4th','5th','6th','7th',]} onValueReturn={handleValueReturnforsemster} content2={selectedsemester}/>
-            <Dropdown content={"BRANCH"} items={['cse','IT','IOT','CSE-AIML','CSE-AIDS','ECE','EEE',]} onValueReturn={handleValueReturnforbranch} content2={selectedbranch}/>
+            <Dropdown content={"BRANCH"} items={['CSE','IT','CSE-IOT','CSE-AIML','CSE-DS','ECE','EEE',]} onValueReturn={handleValueReturnforbranch} content2={selectedbranch}/>
         </div>
         {/* here the state is used previously in place of selected semster and selected branch but now no state is used this part is basically to check which semester is selceted and which subjects to display */}
         <div className={`${!(selectedsemester == "" || selectedbranch == "") ? 'block' : 'hidden'} w-full flex justify-center overflow-hidden`}>

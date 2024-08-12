@@ -34,7 +34,7 @@ const Herosection = () => {
                         className="relative bg-black rounded-[1rem]">
                             <div className="h-[1.4rem] bg-gray-500 rounded-t-[0.9rem]"/>
                                 <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
-                                    <motion.img className="w-full" width={1024} height={490} src="https://picsum.photos/1024/490" alt="randomIMG" />
+                                    <motion.img className="w-full "   src="src\assets\images\banner.png" alt="randomIMG" />
                                 </div>
                             </motion.div>
                         </div>

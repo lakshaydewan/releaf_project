@@ -79,7 +79,7 @@ function Studylyout() {
                         setwidth2("w-0")
                     }
                     
-                }} className="w-full p-3 bg-white text-black h-fit border text-2xl font-bold border-none rounded-3xl">OPEN MENU BAR</button>
+                }} className="w-full lg:p-6 lg:text-4xl hover:bg-purple-400 p-3 bg-white text-black h-fit border text-2xl font-bold border-none rounded-3xl">Change Content</button>
                     {/* this area is commented will be checked later */}
                     {/* <button className="w-full bg-white text-black h-1/2 border text-2xl font-bold border-none rounded-3xl">CHECKOUT ALL PDFs</button> */}
                 </div>
