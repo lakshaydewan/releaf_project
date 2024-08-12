@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Dropdown } from "./dropdown";
 import { playlistlinks } from "../assets/links/links";
-import { pdflinks } from "./links";
+import { listofsubject, pdflinks } from "./links";
 
 
 
@@ -22,15 +22,7 @@ function Sidemenubar2(){
     console.log(selectedbranch)
     console.log(selectedsemester)
 
-    const listofsubjects = [
-      { id:1 ,semester:'1st', branch:'IT',  value:['APPLIED MATHS', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2','APPLIED PHYSICS I', 'EVS', 'CHEMISTRY','evs','maths2','physics2',"MANUFACTURING PROCESS"]},
-      { id:1 ,semester:'2nd', branch:'IT',  value:['APPLIED PHYSICS I2', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
-      { id:1 ,semester:'3rd', branch:'IT',  value:['APPLIED PHYSICS I3', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
-      { id:1 ,semester:'4th', branch:'IT',  value:['APPLIED PHYSICS I4', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
-      { id:1 ,semester:'5th', branch:'IT',  value:['APPLIED PHYSICS I5', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
-      { id:1 ,semester:'6th', branch:'IT',  value:['APPLIED PHYSICS I6', 'EVS', 'CHEMISTRY','evs','maths2','physics2']},
-
-  ]
+    const listofsubjects = listofsubject;
 
   const selectedsubjectEntry = listofsubjects.find(subject => subject.semester === selectedsemester && subject.branch === selectedbranch);
   const subjectEntry = selectedsubjectEntry ? selectedsubjectEntry.value : [];
@@ -81,7 +73,7 @@ function Sidemenubar2(){
         </div></div>
        <div className="w-full bg-white text-black flex flex-col items-center border border-t-white">
        <Dropdown2 content={selectedsemester} defaultcontent={'SEMESTER'} urlsender={"semester"} check={true} itemlist={['1st','2nd','3rd','4th']}/>
-       <Dropdown2 content={selectedbranch} defaultcontent={'BRANCH'} urlsender={"branch"} check={true} itemlist={['cse','IT','IOT','CSE-AIML','CSE-AIDS','ECE','EEE',]}/>
+       <Dropdown2 content={selectedbranch} defaultcontent={'BRANCH'} urlsender={"branch"} check={true} itemlist={[' CSE','IT','CSE-IOT','CSE-AIML','CSE-DS','ECE','EEE',]}/>
        <Dropdown2 content={selectedsubject} defaultcontent={'subject'} urlsender={"subject"} check={(selectedbranch && selectedsemester)} itemlist={subjectEntry}/>
        </div>
        {/* to be checked later */}
