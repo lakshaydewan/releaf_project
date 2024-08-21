@@ -312,4 +312,56 @@ const listofsubject = [
 
 ]
 
+const playlistlinks = {
+  "1st": {
+      "APPLIED CHEMISTRY": {
+          "unit1": [
+              {
+                  "title": " Solid | Liquid | Geseous | Calorific Value | Cracking | Octane & Cetane",
+                  "src": "https://www.youtube.com/embed/fBq3C92-wig?si=EiHeC85Jf-zrU4Xe"
+              },
+  //             {
+  //                 "title": "Limits and Continuity",
+  //                 "src": "https://www.youtube.com/embed/def456?si=example"
+  //             },
+  //             {
+  //                 "title": "Differentiation",
+  //                 "src": "https://www.youtube.com/embed/ghi789?si=example"
+  //             }
+          ],
+  //         "unit2": [
+  //             {
+  //                 "title": "Integration Basics",
+  //                 "src": "https://www.youtube.com/embed/jkl012?si=example"
+  //             },
+  //             {
+  //                 "title": "Definite Integrals",
+  //                 "src": "https://www.youtube.com/embed/mno345?si=example"
+  //             }
+  //         ]
+      }
+  },
+  // "2nd": {
+  //     "PHYSICS": {
+  //         "unit1": [
+  //             {
+  //                 "title": "Kinematics",
+  //                 "src": "https://www.youtube.com/embed/pqr678?si=example"
+  //             },
+  //             {
+  //                 "title": "Newton's Laws",
+  //                 "src": "https://www.youtube.com/embed/stu901?si=example"
+  //             }
+  //         ],
+  //         "unit2": [
+  //             {
+  //                 "title": "Work and Energy",
+  //                 "src": "https://www.youtube.com/embed/vwx234?si=example"
+  //             }
+  //         ]
+  //     }
+  // }
+}
+
+
 export {pdflinks,Theorycontent,listofsubject}
