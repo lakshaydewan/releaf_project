@@ -48,7 +48,7 @@ const Herosection = () => {
       
       {/* Image for large devices (lg) */}
       <img
-        src="\images\logo.png"
+        src="\images\lgimgae.png"
         alt="Large Image"
         className="hidden lg:block w-full h-auto"
       />

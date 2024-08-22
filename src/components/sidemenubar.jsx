@@ -29,7 +29,7 @@ function Sidemenubar(){
 
     
 
-    return <div className={`h-screen ${width} lg-hidden lg-w-0 bg-black fixed top-[56px] flex-col transition-all text-white ease-in-out duration-1000 z-[5] space-y-3 overflow-hidden `}>
+    return <div className={`h-screen ${width} lg-hidden lg-w-0 bg-black fixed top-[56px] flex-col transition-all text-white ease-in-out duration-1000 z-[50] space-y-3 overflow-hidden `}>
         <div className="w-full flex justify-end pt-3 px-3 "><div className="relative group" onClick={() => {
         setWidth("w-0")
       }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 cursor-pointer transition-all ease-in-out duration-500 fill-black stroke:white hover:fill-white hover:stroke-black">
@@ -55,8 +55,8 @@ function Sidemenubar(){
             }} className="w-full h-[40px]  flex items-end text-2xl font-semibold px-2 hover:bg-[#1f1f1f]">RESOURCES</button>
             <button onClick={() => {
                 setWidth("w-0")
-                navigate("/Home")
-            }} className="w-full h-[40px]  flex items-end text-2xl font-semibold px-2 hover:bg-[#1f1f1f]">STUDYLAYOUT</button>
+                navigate("/studylayout")
+            }} className="w-full h-[40px]  flex items-end text-2xl font-semibold px-2 hover:bg-[#1f1f1f]">PLAYLIST</button>
         </div>
     </div>
 }

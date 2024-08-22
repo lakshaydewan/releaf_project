@@ -20,7 +20,7 @@ const Bentogrid = () => {
                 <div className="group lg:row-span-2 border border-gray-100 rounded-[40px] p-4 flex flex-col items-left bg-black">
                 <h1 className="group-hover:translate-x-2 text-2xl lg:text-3xl mt-4 lg:mt-6 transition duration-150 ease-linear">Customize Your Learning</h1>
                 <div className="my-4 lg:my-12 rounded-2xl overflow-hidden w-full group-hover:rotate-3 transition duration-150 ease-linear">
-                    <img src="src\assets\images\syllabuspage.png" alt="" className="w-full" />
+                    <img src="\images\syllabuspage.png" alt="" className="w-full" />
                 </div>
                 <p className="mt-4 lg:mt-0 text-left group-hover:translate-x-2 transition duration-150 ease-linear">
                 Easily browse through your syllabus and select subjects to access videos, PDFs, and all the resources you need in one place.
