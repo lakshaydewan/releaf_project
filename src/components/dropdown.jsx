@@ -19,18 +19,25 @@ function Dropdown(props){
       };
 
 
-    return <div className="space-y-1 relative">
+    return <div className="relative">
         <button className="w-28 h-fit p-1 text-sm border border-none rounded-md text-center bg-white
         lg:w-60 lg:p-3 lg:text-base
         md:w-60 md:p-3 md:text-base
-        sm:w-40 sm:p-3 sm:text-base" onClick={() => {
-            setvisible(!visible)
-        }}>{props.content2? props.content2 : props.content }</button>
+        sm:w-40 sm:p-3 sm:text-base" onMouseEnter={() => {
+            setvisible(true)
+           }}
+           onMouseLeave={() => {
+            setvisible(false)
+           }}>{props.content2? props.content2 : props.content }</button>
 
-        <div className={`${visible ? 'block' : 'hidden'} absolute border z-[1] border-white rounded-md w-28 h-fit p-3 lg:w-60 md:w-60 sm:w-40`} style={{
-            backgroundImage: "linear-gradient(120deg ,rgba(112,128,144,1),rgba(44, 62, 80 ,1)" }}>
+        <div onMouseEnter={() => {
+                    setvisible(true)
+                   }}
+                   onMouseLeave={() => {
+                    setvisible(false)
+                   }} className={`${visible ? 'block' : 'hidden'} absolute border z-[1] border-white rounded-md w-28 h-fit p-3 lg:w-60 md:w-60 sm:w-40 bg-black`}>
             {props.items.map(item => {
-                return <div key={item} className="h-8 flex items-center justify-center bg-transparent border border-none rounded-md text-white  cursor-pointer hover:bg-gray-500" onClick={() => {
+                return <div key={item} className="h-8 flex items-center justify-center bg-transparent border border-none rounded-md text-white  cursor-pointer hover:bg-zinc-900" onClick={() => {
                     setvisible(false)
                     //this commented area is also previously used
                     // setcontent(item)

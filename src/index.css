@@ -131,3 +131,8 @@
       max-width: 75vw;
     }
   }
+
+  /* Apply to all scrollbars */
+/* ::-webkit-scrollbar {
+  width: 0px; 
+} */

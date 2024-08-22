@@ -19,7 +19,7 @@ function Studyresources(){
     const selectedsemester = queryParams.get('semester') || '';
     const selectedbranch = queryParams.get('branch') || '';
     const selcetedsubject =  queryParams.get('subject') || '';
-    const section = queryParams.get('section') || 'default';
+    const section = queryParams.get('section');
     
     
     const components = {
@@ -27,17 +27,9 @@ function Studyresources(){
         Lab: LAB,
         Pdf: PDF,
         Theory : THEORY,
-        default : THEORY
       };
 
     const Selectedsection = components[section]
-
-    //this commented area is also previously used
-
-    // const [semester,setsemester] = useRecoilState(semesteratom)
-    // const [branch,setbranch] = useRecoilState(branchatom)
-    // const [subject,setsubject] = useState("");
-    // const [visible,setvisible] = useState(false)
 
     const listofsubjects = listofsubject;
 
@@ -82,13 +74,14 @@ function Studyresources(){
                         return <div className="grid grid-cols-2 sm:gap-6 gap-x-4 gap-y-3 px-5 pb-3
                         sm:grid sm:grid-cols-2 sm:px-10
                         md:grid-cols-3 md:px-10
-                        lg:grid-cols-3 lg:px-10">
+                        lg:grid-cols-3 lg:px-10
+                        xl:grid-cols-4 xl:px-10">
                             {subject.value.map(values => {
                             return <div className="bg-white max-w-40 max-h-10  min-w-32 h-8 flex items-center border border-none rounded-md
                             lg:max-w-60 lg:max-h-10 lg:min-w-40 lg:min-h-10 
                             md:max-w-60 md:max-h-10 md:min-w-40 md:min-h-10
                             sm:max-w-60 sm:max-h-10 sm:min-w-40 sm:min-h-10">
-                                <button className="w-full py-1 sm:py-0 text-center text-sm 
+                                <button className="w-full py-1 sm:py-0 text-center text-sm
                                 sm:text-base
                                 md:text-base
                                 lg:text-base" onClick={() => {
@@ -137,17 +130,21 @@ function Studyresources(){
                     }} className="w-full flex justify-center items-center  px-3 py-1 text-white hover:bg-[#1f1f1f] cursor-pointer sm:text-base text-sm">PLAYLIST</div>
                     </div>
                 <div className=" w-10/12  pt-3">
-                    <Selectedsection subject={selcetedsubject} semester={selectedsemester}/>
+                    {section && <Selectedsection  />}
                 </div>
             </div>
         </div>
-        
     </div>
     </div>
 }
 
 function PLAYLIST(props){
 
+    const queryParams = new URLSearchParams(location.search);
+    const selectedsemester = queryParams.get('semester') || '';
+    const selectedbranch = queryParams.get('branch') || '';
+    const selcetedsubject =  queryParams.get('subject') || '';
+    const section = queryParams.get('section') || 'default';
     const navigate = useNavigate()
     const semester = props.semester
     const subject = props.subject
@@ -252,6 +249,11 @@ function PLAYLIST(props){
 function LAB(){
 
     const lablinks = []
+    const queryParams = new URLSearchParams(location.search);
+    const selectedsemester = queryParams.get('semester') || '';
+    const selectedbranch = queryParams.get('branch') || '';
+    const selcetedsubject =  queryParams.get('subject') || '';
+    const section = queryParams.get('section') || 'default';
 
 
     return(
@@ -277,6 +279,10 @@ function LAB(){
 }
 
 function PDF(props){
+    useEffect(()=> {
+        console.log("h9");
+    })
+    
     const navigate = useNavigate()
     const queryParams = new URLSearchParams(location.search);
     const selcetedsubject =  queryParams.get('subject') || '';
@@ -314,17 +320,26 @@ function PDF(props){
 
 function THEORY(props){
 
-    const theorysubject = props.subject
+    const queryParams = new URLSearchParams(location.search);
+    const selectedsemester = queryParams.get('semester') || '';
+    const selectedbranch = queryParams.get('branch') || '';
+    const selcetedsubject =  queryParams.get('subject') || '';
+    const section = queryParams.get('section') || 'default';
+    const theorysubject = selcetedsubject
 
     const list = Theorycontent.find(items => items.subject === theorysubject)
-    const content = list ? list.content : [];
-    const [itemslist,setitemlist] = useState(content)
+    let content = list ? list.content : [];
     console.log(content)
-    console.log(itemslist)
 
+    // useEffect(() => {
+    //     console.log("ran!!")
+    //     setitemlist(content);
+    // }, [content])
+    
+    const [itemslist,setitemlist] = useState(content)
 
     return <div className="text-white mb-5">
-        {(content.length > 0  ) ? (<div >
+        {(itemslist.length > 0  ) ? (<div >
             {itemslist.map(items => {
                 return ( <div>
                 <button className="w-full h-fit p-3 border border-white rounded-md text-white flex flex-col items-start my-2 hover:border-purple-400" key={items.id} onClick={() => {
@@ -350,6 +365,5 @@ function THEORY(props){
 }
 
 
-  
 
 export {Studyresources}

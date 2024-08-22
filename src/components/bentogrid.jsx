@@ -67,7 +67,7 @@ const Bentogrid = () => {
                     <p>Join our platform and dive into a world of tailored learning resources. Click the button below to explore more</p>
                 </div>
                 <div className="w-full mt-10 ">
-                    <button className="w-full flex justify-center items-end bg-white hover:bg-purple-500 h-fit p-4 border-none rounded-2xl text-black text-2xl font-bold">Start Learning <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 flex items-end">
+                    <button className="w-full flex justify-center items-end bg-white hover:bg-purple-500 h-fit p-4 border-none rounded-2xl text-black text-2xl font-bold transition-colors duration-700 ease-out">Start Learning <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 flex items-end">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                     </svg>
                     </button>

@@ -3,7 +3,7 @@
 const playlistlinks = 
     {
         "1st":{
-            "APPLIED MATHS":{
+            "APPLIED MATHS-I":{
                 "unit1":[
                     {title:"title", src:"https://www.youtube.com/embed/YaoQOR7YP9Q?si=swSfXExFZXCIqZ6g"},
                     {title:"title2",src:"https://www.youtube.com/embed/gu-FirJSP-Y?si=Pw2ItXAbXS38L-T_"},
