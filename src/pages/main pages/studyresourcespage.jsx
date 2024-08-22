@@ -298,7 +298,7 @@ function PDF(props){
                     return(
                         <div key={items.id} className="flex justify-center">
                             <button onClick={() => {
-                            navigate("/studylayout" + "?pdflink=" + (items.title) +"&semester=" + (selectedsemester) + "&branch=" + (selectedbranch) + "&subject=" + (selcetedsubject) )
+                            navigate("/studylayout" + "?pdflink=" + (items.src) +"&semester=" + (selectedsemester) + "&branch=" + (selectedbranch) + "&subject=" + (selcetedsubject) )
                         }} className="h-fit w-fit col-span-1">
                             <div className="h-fit p-1 w-full bg-black flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="md:size-28 size-16 hover:text-purple-400">

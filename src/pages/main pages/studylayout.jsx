@@ -21,29 +21,6 @@ function Studylyout() {
     const pdf = queryParams.get("pdflink" || "")
     console.log(pdf)
     
-    function findObjectByTitle(title) {
-            for (const subject of pdflinks) {
-                console.log("program running")
-              const foundLink = subject.links.find(link => link.title === title);
-              if (foundLink) {
-                console.log("linkfound")
-                return foundLink.src;
-
-              }
-            }
-            return null; // Return null if not found
-          }
-
-    
-          const iframeref = useRef(null)
-
-          useEffect(() => {
-            const pdflink = findObjectByTitle(pdf);
-            if (pdflink && iframeref.current) {
-              iframeref.current.src = `${pdflink}#toolbar=0&view=FitH`;
-            }
-          }, [pdf]);
-          console.log("page re-rendered")
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -96,7 +73,7 @@ function Studylyout() {
                     }
                     
                 }} className="w-10/12 h-20 bg-white font-bold text-2xl -mt-3">Add pdf</button>
-        </div>)  :  <iframe ref={iframeref}  className="h-full w-full border-y-4 border-gray-700"></iframe>}
+        </div>)  :  <iframe src={pdf}  className="h-full w-full border-y-4 border-gray-700"></iframe>}
         </div>
     </div>
     {/* <div className="md:h-screen md:w-full md:p-3 md:flex md:justify-around hidden">

@@ -167,7 +167,7 @@ function Pdfcomponent(props){
                         <div key={items.id} className="w-full">
                             <button className="w-full" onClick={() => {
                             const queryParams = new URLSearchParams(location.search);
-                            queryParams.set('pdflink', items.title );
+                            queryParams.set('pdflink', items.src );
                             navigate({ search: queryParams.toString() });
                         }} >
                             <div className="h-fit w-full space-x-2 hover:bg-[#1f1f1f] text-white  flex justify-start items-end"><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class=" size-5 ">
