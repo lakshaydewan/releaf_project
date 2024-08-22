@@ -35,20 +35,20 @@ const Herosection = () => {
                             <div className="h-[1.4rem] bg-gray-500 rounded-t-[0.9rem]"/>
                                 <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                                 <img
-        src="public\images\syllabuspage.png"
+        src="\images\syllabuspage.png"
         alt="Mobile Image"
         className="block md:hidden lg:hidden w-full h-auto"
       />
       
       <img
-        src="public\images\mdimage.png"
+        src="\images\mdimage.png"
         alt="Medium Image"
         className="hidden md:block lg:hidden w-full h-auto"
       />
       
       {/* Image for large devices (lg) */}
       <img
-        src="public\images\logo.png"
+        src="\images\logo.png"
         alt="Large Image"
         className="hidden lg:block w-full h-auto"
       />
