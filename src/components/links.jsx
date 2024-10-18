@@ -312,56 +312,142 @@ const listofsubject = [
 
 ]
 
-const playlistlinks = {
+
+  const playlistlinks = {
   "1st": {
-      "APPLIED CHEMISTRY": {
+      "MANUFACTURING PROCESSES": {
           "unit1": [
               {
-                  "title": " Solid | Liquid | Geseous | Calorific Value | Cracking | Octane & Cetane",
-                  "src": "https://www.youtube.com/embed/fBq3C92-wig?si=EiHeC85Jf-zrU4Xe"
-              },
-  //             {
-  //                 "title": "Limits and Continuity",
-  //                 "src": "https://www.youtube.com/embed/def456?si=example"
-  //             },
-  //             {
-  //                 "title": "Differentiation",
-  //                 "src": "https://www.youtube.com/embed/ghi789?si=example"
-  //             }
+                  "title": "Introduction to Manufacturing Processes",
+                  "src": "https://youtube.com/playlist?list=PLbkIghvjQ7P9THjzpqSA1UWD0-VWMZlsl&si=eb4z6U5koJwznQiX"
+              }
           ],
-  //         "unit2": [
-  //             {
-  //                 "title": "Integration Basics",
-  //                 "src": "https://www.youtube.com/embed/jkl012?si=example"
-  //             },
-  //             {
-  //                 "title": "Definite Integrals",
-  //                 "src": "https://www.youtube.com/embed/mno345?si=example"
-  //             }
-  //         ]
+          "unit2": [
+              {
+                  "title": "Casting Processes",
+                   "src": "https://youtube.com/playlist?list=PLbkIghvjQ7P9THjzpqSA1UWD0-VWMZlsl&si=eb4z6U5koJwznQiX"
+              }
+          ],
+          "unit3": [
+              {
+                  "title": "Forming Processes",
+                   "src": "https://youtube.com/playlist?list=PLbkIghvjQ7P9THjzpqSA1UWD0-VWMZlsl&si=eb4z6U5koJwznQiX"
+              }
+          ],
+          "unit4": [
+              {
+                  "title": "Machining Processes",
+                   "src": "https://youtube.com/playlist?list=PLbkIghvjQ7P9THjzpqSA1UWD0-VWMZlsl&si=eb4z6U5koJwznQiX"
+              }
+          ]
+      },
+      "COMMUNICATION SKILLS": {
+          "unit1": [
+              {
+                  "title": "Effective Communication Techniques",
+                  "src": "https://youtu.be/iXsE1A2RMZk?si=cPIZyIc52ysak9QU"
+              }
+          ],
+          "unit2": [
+              {
+                  "title": "Public Speaking Tips",
+                  "src": "https://youtu.be/iXsE1A2RMZk?si=cPIZyIc52ysak9QU"
+              }
+          ],
+          "unit3": [
+              {
+                  "title": "Nonverbal Communication",
+                  "src": "https://youtu.be/iXsE1A2RMZk?si=cPIZyIc52ysak9QU"
+              }
+          ],
+          "unit4": [
+              {
+                  "title": "Active Listening Skills",
+                  "src": "https://youtu.be/iXsE1A2RMZk?si=cPIZyIc52ysak9QU"
+              }
+          ]
+      },
+      "APPLIED MATH 1": {
+          "unit1": [
+              {
+                  "title": "partial derivative",
+                  "src": "https://youtube.com/playlist?list=PLPZy5YxW4Wh7zJnEzveGK0lQfXf_Le082&si=OfYB5HwP6fuOL7vv"
+              }
+          ],
+          "unit2": [
+              {
+                  "title": "Ordinary Differntial equation"
+                  "src": "https://youtube.com/playlist?list=PL5fCG6TOVhr4jafvBSrmouZt0aqNjPlhd&si=MHBoF3F--ny_Co6L"
+              }
+          ],
+          "unit3": [
+              {
+                  "title": "Matrix and detreminants",
+                  "src": "https://youtube.com/playlist?list=PL5fCG6TOVhr4jafvBSrmouZt0aqNjPlhd&si=MHBoF3F--ny_Co6L"
+                  
+              }
+          ],
+          "unit4": [
+              {
+                  "title": "vector calculus",
+                  "src": "https://youtube.com/playlist?list=PL5fCG6TOVhr4jafvBSrmouZt0aqNjPlhd&si=MHBoF3F--ny_Co6L"
+              }
+          ]
+      },
+      "APPLIED PHYSICS": {
+          "unit1": [
+              {
+                  "title": "Thermodynamics",
+                  "src": "https://youtube.com/playlist?list=PL0s3O6GgLL5fsCIx935erCDBWzMtiRAjg&si=roh8RIxuGi_VruV5"
+              }
+          ],
+          "unit2": [
+              {
+                  "title": "shm and electromagnetic theory",
+                  "src" : "https://youtube.com/playlist?list=PL5fCG6TOVhr7TVHli9AFALiUaRL-2P_Ax&si=mqGHrY_n_6Y4idCt"
+                 
+              }
+          ],
+          "unit3": [
+              {
+                  "title": "Theory of realtivity",
+                  "src": "https://youtube.com/playlist?list=PLyTVFDODClZh6qUC3jnjojsEs0SBkiIPT&si=EyY9QTc1d5-p4i3x"
+              }
+          ],
+          "unit4": [
+              {
+                  "title": "Waves and Oscillations",
+                  "src": "https://www.youtube.com/embed/example20?si=example"
+              }
+          ]
+      },
+      "APPLIED CHEMISTRY 1": {
+          "unit1": [
+              {
+                  "title": "fuels",
+                  "src": "https://youtube.com/playlist?list=PLCv7Lr71xYOJCeMwHrzQmvViXFU-qxiLT&si=PpH7INugs_MDufWY"
+              }
+          ],
+          "unit2": [
+              {
+                  "title": "Phase rule and polymers",
+                  "src": "https://youtube.com/playlist?list=PLCv7Lr71xYOKFa1SR8KoTynRSu1lgzfKQ&si=UuF31QEnZY_rK9AP"
+              }
+          ],
+          "unit3": [
+              {
+                  "title": "water",
+                  "src": "https://youtube.com/playlist?list=PLjgyGylma3IHGxlf7iP6JDi73GKfc4ekB&si=s-5BqzhZkzXsCJdx"
+              }
+          ],
+          "unit4": [
+              {
+                  "title": "corrosion",
+                  "src": "https://youtube.com/playlist?list=PLLf6O8XdGj00lVydanLfC6bcT4aXGJN4V&si=q4G8izYqgKkOnrhT"
+              }
+         ],
       }
-  },
-  // "2nd": {
-  //     "PHYSICS": {
-  //         "unit1": [
-  //             {
-  //                 "title": "Kinematics",
-  //                 "src": "https://www.youtube.com/embed/pqr678?si=example"
-  //             },
-  //             {
-  //                 "title": "Newton's Laws",
-  //                 "src": "https://www.youtube.com/embed/stu901?si=example"
-  //             }
-  //         ],
-  //         "unit2": [
-  //             {
-  //                 "title": "Work and Energy",
-  //                 "src": "https://www.youtube.com/embed/vwx234?si=example"
-  //             }
-  //         ]
-  //     }
-  // }
-}
-
+  }
+};
 
 export {pdflinks,Theorycontent,listofsubject}
