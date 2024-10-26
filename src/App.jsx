@@ -139,12 +139,12 @@ function App() {
     </div>}/>} /> 
         <Route path='/termsandconditions' element={<Aboutsection heading={"Terms and condition"} content={ <div className="container mx-auto px-4 py-8">
       <p className="text-lg mb-4">
-        Welcome to [Your Website Name]. These Terms and Conditions outline the rules and regulations for the use of our website. By accessing or using our site, you agree to comply with and be bound by these terms.
+        Welcome to Releaf. These Terms and Conditions outline the rules and regulations for the use of our website. By accessing or using our site, you agree to comply with and be bound by these terms.
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
       <p className="text-lg mb-4">
-        By accessing or using [Your Website Name], you accept and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our site.
+        By accessing or using Releaf, you accept and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our site.
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">2. Changes to Terms</h2>
@@ -154,12 +154,12 @@ function App() {
 
       <h2 className="text-2xl font-semibold mb-4">3. Use of the Website</h2>
       <p className="text-lg mb-4">
-        You agree to use [Your Website Name] for lawful purposes only and in a manner that does not infringe upon the rights of, restrict, or inhibit anyone else's use and enjoyment of the site.
+        You agree to use Releaf for lawful purposes only and in a manner that does not infringe upon the rights of, restrict, or inhibit anyone else's use and enjoyment of the site.
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">4. Intellectual Property</h2>
       <p className="text-lg mb-4">
-        All content on [Your Website Name], including text, images, and videos, is the property of [Your Website Name] or its licensors and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works from any content without our prior written consent.
+        All content on Releaf, including text, images, and videos, is the property of Releaf or its licensors and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works from any content without our prior written consent.
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">5. User Accounts</h2>
@@ -169,12 +169,12 @@ function App() {
 
       <h2 className="text-2xl font-semibold mb-4">6. Limitation of Liability</h2>
       <p className="text-lg mb-4">
-        [Your Website Name] will not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use our site. We make no guarantees regarding the accuracy or completeness of the content on our site.
+        Releaf will not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use our site. We make no guarantees regarding the accuracy or completeness of the content on our site.
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">7. Links to Other Websites</h2>
       <p className="text-lg mb-4">
-        Our site may contain links to third-party websites that are not owned or controlled by [Your Website Name]. We are not responsible for the content or practices of any third-party websites.
+        Our site may contain links to third-party websites that are not owned or controlled by Releaf. We are not responsible for the content or practices of any third-party websites.
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">8. Governing Law</h2>
@@ -192,7 +192,6 @@ function App() {
         </a>
       </p>
     </div>}/>}/>
-
       </Routes>
       </BrowserRouter>
     </>

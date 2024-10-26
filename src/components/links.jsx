@@ -376,7 +376,7 @@ const listofsubject = [
           ],
           "unit2": [
               {
-                  "title": "Ordinary Differntial equation"
+                  "title": "Ordinary Differntial equation",
                   "src": "https://youtube.com/playlist?list=PL5fCG6TOVhr4jafvBSrmouZt0aqNjPlhd&si=MHBoF3F--ny_Co6L"
               }
           ],
